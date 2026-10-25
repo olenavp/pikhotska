@@ -1,0 +1,18 @@
+@use '../utils/variables' as *;
+@use '../utils/placeholders' as *;
+@use '../utils/mixins' as *;
+
+.logo {
+  @extend %link;
+  font-weight: 700;
+
+  color: $dark-accent-color;
+
+  &--dark {
+    color: $dark-accent-color;
+  }
+
+  &--white {
+    color: $primary-white-color;
+  }
+}

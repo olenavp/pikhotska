@@ -1,0 +1,84 @@
+@use '../utils/variables' as *;
+
+.section {
+  padding-top: 36px;
+  padding-bottom: 36px;
+
+  &--background {
+    background-color: $light-accent-color;
+  }
+
+  @media screen and (min-width: 768px) {
+    padding-top: 60px;
+    padding-bottom: 60px;
+  }
+
+  @media screen and (min-width: 1440px) {
+    padding-top: 90px;
+    padding-bottom: 90px;
+  }
+
+}
+
+.section__title {
+  font-family: "Spectral-LightItalic", serif;
+  margin-bottom: 12px;
+
+  color: $primary-text-color;
+  font-weight: 300;
+  font-style: italic;
+  font-size: 28px;
+  line-height: 1;
+  text-align: center;
+
+  @media screen and (min-width: 480px) {
+    font-size: 30px;
+  }
+
+  @media screen and (min-width: 768px) {
+    font-size: 32px;
+  }
+
+  @media screen and (min-width: 980px) {
+    font-size: 36px;
+  }
+
+  @media screen and (min-width: 1024px) {
+    font-size: 44px;
+  }
+
+  @media screen and (min-width: 1440px) {
+    font-size: 48px;
+  }
+
+
+  &--hidden {
+    position: absolute;
+    white-space: nowrap;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    border: 0;
+    padding: 0;
+    clip: rect(0 0 0 0);
+    clip-path: inset(50%);
+    margin: -1px;
+  }
+}
+
+.section__subtitle {
+  margin-bottom: 16px;
+  font-size: 16px;
+  line-height: 1.5;
+  text-align: center;
+
+  @media screen and (min-width: 768px) {
+    font-size: 18px;
+    margin-bottom: 24px;
+  }
+
+  @media screen and (min-width: 1440px) {
+    font-size: 20px;
+    margin-bottom: 32px;
+  }
+}

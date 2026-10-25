@@ -1,0 +1,119 @@
+{
+  "menu": {
+    "about": "About Me",
+    "requests": "Your Requests",
+    "methods": "My Methods",
+    "consultations": "Consultations",
+    "reviews": "Testimonials",
+    "faq": "FAQ",
+    "button": "Book a Consultation"
+  },
+  "hero": {
+    "title": "Certified Psychologist, Psychological Counsellor",
+    "title1": "Certified Psychologist, ",
+    "title2": "Psychological Counsellor",
+    "subtitle": "Member of the National Psychological Association",
+    "button": "Book a Consultation",
+    "secondary_button": "Learn More"
+  },
+  "about": {
+    "title": "Foundations of My Professional Practice",
+    "text": "In the field of continuous learning, I adhere to the following principles:",
+    "list": {
+      "item1-1": "Supervision",
+      "item1-2": "professional guidance and psychological support in professional practice",
+      "item2-1": "Intervision",
+      "item2-2": "peer support and exchange of professional experience",
+      "item3-1": "Training",
+      "item3-2": "regular development of qualifications and professional competencies",
+      "item4-1": "Personal Therapy",
+      "item4-2": "the foundation of psychological balance",
+      "item5-1": "Ethical Standards",
+      "item5-2": "adherence to the principles and standards of the psychologist's code of ethics"
+    }
+  },
+  "goal": {
+    "title": "My Goal ",
+    "text": "My goal     is to help people reconnect with themselves, restore the joy of life, and build a healthy mind."
+  },
+  "diplomas": {
+    "title": "My Diplomas and Certificates"
+  },
+  "requests": {
+    "title": "Requests you may address to me:",
+    "list": {
+      "item1": "Psychological challenges of adaptation in emigration",
+      "item2": "Working through parent–child relationships",
+      "item3": "Working through childhood trauma",
+      "item4": "Working with fear, conflicts, and anxiety",
+      "item5": "Adult therapy",
+      "item6": "Building self-esteem",
+      "item7": "Learning to say “no”",
+      "item8": "Building personal boundaries",
+      "item9": "Couple conflicts / romantic relationships",
+      "item10": "Transition into adulthood",
+      "item11": "Relationships with money",
+      "item12": "Strengthening inner support"
+    }
+  },
+  "methods": {
+    "title": "Methods I work with:",
+    "subtitle": "In my practice, I use an integrative approach: combining different methods and selecting them according to the individual request. This allows me to find the most effective path specifically for you.",
+    "list": {
+      "item1": "Art therapy",
+      "item2": "Body-oriented therapy",
+      "item3": "Gestalt therapy",
+      "item4": "Elements of symboldrama",
+      "item5": "Emotion–image therapy",
+      "item6": "Positive psychotherapy"
+    }
+  },
+  "consultations": {
+    "title": "I invite you to a consultation",
+    "individual": "The fee for an individual consultation (55 minutes) is",
+    "individual-price": "1800 UAH",
+    "couple": "The fee for a couples consultation (90 minutes) is",
+    "couple-price": "2500 UAH",
+    "free": "For the wives of Armed Forces of Ukraine servicemen, the first consultation is",
+    "free-price": "free of charge",
+    "book": "To book a consultation"
+  },
+  "reviews": {
+    "title": "What Clients Say",
+    "review1": "I believe you’re an amazing psychologist who truly heals with words. You have a deep understanding of how the mind works. You’ve helped me uncover so much and prevented me from falling into complete exhaustion and confusion about my state. As a psychologist, you’re a wonderful professional — inspiring, gentle, and always careful not to hurt or disturb anyone, striving instead to help them remain in a stable state. It’s also very touching that you stay in touch even outside of working hours — it means a lot, especially during difficult times, no matter how awkward it might feel to ask for help. ",
+    "review2": "Good afternoon, Ms. Yulia. I apologize — our chat got lost among my work messages, and I completely forgot that I had promised to leave feedback. I really enjoyed working with you. I’m very grateful for your help and the advice you gave me. Most importantly, I heard from you not what I wanted to hear, but what I needed to hear.",
+    "review3": "I’m very satisfied with our work together, Yulia. For a long time, I was troubled by thoughts that kept running through my mind over and over again. But after working with you, I was finally able to sort everything out and understand many things about myself.",
+    "review4": "I kept postponing our meeting because I thought I could handle everything on my own. But after just a few sessions, I realized how much I really needed it. Thank you for opening my eyes to so many things, for helping me cope with everything, and for making me realize my true worth.",
+    "review5": "Only after our sessions did I realize what it truly means to be heard. At first, it wasn’t easy, but each session opened something new about myself. Now I feel much calmer, and you’ve given me something I had been missing for a long time."
+  },
+  "faq": {
+    "title": "Frequently Asked Questions",
+    "q1": "Can I reach out even if I don't have a clear request?",
+    "a1": "Yes. People often reach out just with a feeling that something is wrong, or when they want to understand themselves better. This is already a valid reason for a consultation.",
+    "q2": "What happens during the first consultation?",
+    "a2": "During the first consultation, we discuss your needs and expectations, agree on the format, and make arrangements for further work. We can also begin working on your requests right away.",
+    "q3": "How can I know how many consultations I'll need?",
+    "a3": "The number of consultations depends on your individual request and goals. Usually, the first few consultations help understand how much time may be needed.",
+    "q4": "Do I need to prepare for consultations?",
+    "a4": "No special preparation is needed. It’s only important to find a space where you won’t be disturbed. Sometimes, I may give home tasks that help reinforce the results."
+  },
+  "footer": {
+    "name": "Yuliia Pihotska",
+    "position": "Practical Psychologist",
+    "button": "Consultation",
+    "email": "Email:",
+    "phone": "Phone: ",
+    "navitem1": "About me",
+    "navitem2": "Consultations",
+    "navitem3": "Testimonials",
+    "copyright": "© 2025 Yuliia Pihotska"
+  },
+  "form": {
+    "title": "Please leave your details. I will contact you shortly to arrange our meeting.",
+    "name": "Name",
+    "phone": "Phone",
+    "messenger": "Which app do you prefer for communication?",
+    "message": "Message",
+    "button": "Send"
+  }
+}

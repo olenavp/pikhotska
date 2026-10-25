@@ -1,0 +1,62 @@
+@use '../utils/variables' as *;
+@use '../utils/mixins' as *;
+@use '../utils/placeholders' as *;
+
+#requests {
+  color: $primary-text-color;
+  text-align: center;
+
+  .container {
+    margin: 0 auto;
+    padding: 0 20px;
+  }
+
+  .requests-list {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 18px;
+    text-align: left;
+    max-width: 900px;
+    margin: 0 auto;
+
+    @media screen and (min-width: 900px) {
+      grid-template-columns: 1fr 1fr;
+      gap: 20px 24px;
+    }
+  }
+
+  .requests-list__item {
+    position: relative;
+    background: rgba(255, 255, 255, 0.75);
+    border-left: 6px solid $medium-accent-color;
+    padding: 18px 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0, 40, 100, 0.1);
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    max-width: 450px;
+    min-height: 60px;
+
+    margin: 0 auto;
+
+    &:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 6px 16px rgba(0, 40, 100, 0.08);
+    }
+
+    .requests-list__icon {
+      position: absolute;
+      left: 15px;
+      top: 50%;
+      transform: translateY(-50%);
+    }
+
+    .requests-list__inscription {
+      font-size: 16px;
+      line-height: 1.6;
+      color: $primary-text-color;
+    }
+  }
+}

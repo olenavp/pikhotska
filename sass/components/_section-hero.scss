@@ -1,0 +1,224 @@
+@use '../utils/variables' as *;
+
+.hero-section {
+  position: relative;
+  background-color: $light-accent-color;
+  overflow: hidden;
+
+  .container {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0;
+  }
+
+  .hero-section__content {
+    position: static;
+    top: auto;
+    left: auto;
+    transform: none;
+    padding: 1rem 1.5rem;
+    z-index: 2;
+    width: 100%;
+    max-width: 90%;
+    text-align: center;
+    margin: 0 auto 1.5rem;
+
+    .hero-section__title {
+      font-size: 1rem;
+      font-weight: 700;
+      line-height: 1.1;
+      margin-bottom: 0.5rem;
+    }
+
+    .hero-section__subtitle {
+      font-family: "Manrope", sans-serif;
+      font-size: 0.9rem;
+      line-height: 1.2;
+    }
+
+    @media (min-width: 480px) {
+      width: 90%;
+
+      .hero-section__title {
+        font-size: 1.2rem;
+      }
+
+      .hero-section__subtitle {
+        font-size: 1rem;
+      }
+    }
+
+    @media (min-width: 768px) {
+      position: absolute;
+      top: 50%;
+      left: 0%;
+      transform: translate(0, -50%);
+      width: 55%;
+      padding: 1.5rem;
+      text-align: left;
+      margin: 0;
+
+      .hero-section__title {
+        font-size: 1.5rem;
+        margin-bottom: 1rem;
+      }
+
+      .hero-section__subtitle {
+        font-size: 1rem;
+      }
+    }
+
+    @media (min-width: 1024px) {
+      width: 50%;
+
+      .hero-section__title {
+        font-size: 1.75rem;
+        margin-bottom: 1rem;
+      }
+
+      .hero-section__subtitle {
+        font-size: 1.25rem;
+      }
+    }
+
+    @media (min-width: 1200px) {
+      width: 45%;
+
+      .hero-section__title {
+        font-size: 2rem;
+        margin-bottom: 1rem;
+      }
+
+      .hero-section__subtitle {
+        font-size: 1.5rem;
+      }
+    }
+
+    @media (min-width: 1440px) {
+      left: 2%;
+
+      .hero-section__title {
+        font-size: 2.8rem;
+        margin-bottom: 1rem;
+      }
+
+      .hero-section__subtitle {
+        font-size: 2rem;
+      }
+    }
+
+    @media (min-width: 1920px) {
+      width: 45%;
+      left: 2%;
+      padding: 3rem;
+
+      .hero-section__title {
+        font-size: 3.5rem;
+      }
+
+      .hero-section__subtitle {
+        font-size: 2.5rem;
+      }
+    }
+  }
+
+  .hero-section__image-wrapper {
+    position: relative;
+    max-width: 100%;
+    margin: 0 auto;
+    flex-shrink: 0;
+    z-index: 1;
+
+    width: 100%;
+
+    @media (min-width: 480px) and (max-width: 767px) {
+      width: 480px;
+    }
+
+
+    img {
+      display: block;
+      width: 100%;
+      height: auto;
+      object-fit: contain;
+      transition: transform 0.5s ease;
+    }
+
+    &:hover img {
+      transform: scale(1.03);
+    }
+
+    @media (min-width: 768px) {
+      img {
+        border-radius: 0;
+      }
+    }
+  }
+
+  .hero-section__actions {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+    margin-top: 1.5rem;
+
+    @media (min-width: 768px) {
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: flex-start;
+      gap: 16px;
+      margin-top: 2.5rem;
+    }
+  }
+
+  .hero-section__btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.8rem 2rem;
+    font-size: 1rem;
+    font-weight: 700;
+    line-height: 1.2;
+    border-radius: 8px;
+    white-space: nowrap;
+    border: 2px solid transparent;
+    cursor: pointer;
+    transition: all 0.5s ease;
+    text-decoration: none;
+    width: 100%;
+
+    @media (min-width: 768px) {
+      width: auto;
+      padding: 12px 24px;
+    }
+
+    &:not(.hero-section__btn--secondary) {
+      background-color: $dark-accent-color;
+      color: #ffffff;
+      border-color: $dark-accent-color;
+
+      &:hover {
+        background-color: #003a79;
+        border-color: #003a79;
+      }
+    }
+
+    &--secondary {
+      background-color: transparent;
+      color: $dark-accent-color;
+      border-color: $dark-accent-color;
+
+      &:hover {
+        background-color: #003a79;
+        color: #ffffff;
+        border-color: #003a79;
+      }
+    }
+  }
+}

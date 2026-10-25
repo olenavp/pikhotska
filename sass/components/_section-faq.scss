@@ -1,0 +1,69 @@
+@use '../utils/variables' as *;
+@use '../utils/placeholders' as *;
+@use '../utils/mixins' as *;
+
+.section-faq .container {
+  @media screen and (min-width: 1200px) {
+    @include flexCentered;
+    display: flex;
+    flex-direction: row;
+  }
+}
+
+.accordion {
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: left;
+}
+
+.accordion-item {
+  border-bottom: 1px solid $light-accent-color;
+}
+
+.accordion-header {
+  display: flex;
+  align-items: center;
+
+  width: 100%;
+  text-align: left;
+  padding: 20px 24px;
+  font-size: 18px;
+  font-weight: 700;
+  background: $primary-bg-color;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.accordion-header:hover {
+  background: $dark-accent-color;
+  color: $light-accent-color;
+
+  .icon-plus {
+    color: $light-accent-color;
+  }
+}
+
+.accordion-content {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease;
+  padding: 0 20px;
+  background: $primary-bg-color;
+}
+
+.accordion-content p {
+  margin: 15px 0;
+  font-size: 16px;
+  line-height: 1.5;
+  padding: 8px;
+}
+
+.icon-plus {
+  display: inline-block;
+  font-size: 50px;
+  text-align: center;
+  color: $dark-accent-color;
+  margin-right: 12px;
+}

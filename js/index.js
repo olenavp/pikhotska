@@ -1,0 +1,10 @@
+import './menu.js';
+import './slider.js';
+import './reviews.js';
+import './accordion.js';
+import './facade.js';
+import './modal.js';
+import './i18next.js';
+import './contactModal.js';
+import './validation.js';
+import './chat.js';

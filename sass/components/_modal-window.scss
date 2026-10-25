@@ -1,0 +1,62 @@
+@use '../utils/mixins' as *;
+@use '../utils/variables' as *;
+@use '../utils/placeholders' as *;
+
+.backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.5);
+  opacity: 1;
+  pointer-events: auto;
+  transition: opacity 0.25s ease;
+}
+
+.backdrop.is-hidden {
+  opacity: 0;
+  pointer-events: none;
+}
+
+.modal {
+  background-color: #fff;
+  padding: 30px;
+  border-radius: 8px;
+  max-width: 500px;
+  width: 90%;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3);
+}
+
+.modal.is-hidden {
+  display: none !important;
+}
+
+@media screen and (min-width: 1200px) {
+  .modal {
+    width: 80%;
+    max-width: 900px;
+    padding: 40px;
+  }
+}
+
+
+.modal__close-button {
+  @include flexCentered;
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  z-index: 1;
+
+  width: 30px;
+  height: 30px;
+
+  background: $primary-white-color;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 50%;
+
+  cursor: pointer;
+}

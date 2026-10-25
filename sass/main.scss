@@ -1,0 +1,33 @@
+@use 'base/fonts';
+@use 'base/normalize';
+
+@use 'utils/variables';
+
+@use 'base/base';
+
+@use 'utils/mixins';
+@use 'utils/placeholders';
+
+@use 'components/container';
+@use 'common/logo';
+@use 'common/button';
+
+@use 'components/page-header';
+
+@use 'components/section-common';
+@use 'components/section-hero';
+@use 'components/contact-form';
+@use 'components/_section-goal';
+@use 'components/section-about';
+@use 'components/section-diplomas';
+@use 'components/_section-requests';
+@use 'components/_section-methods';
+@use 'components/section-video';
+@use 'components/section-reviews';
+@use 'components/section-faq';
+
+@use 'components/chat';
+
+@use 'components/page-footer';
+
+@use 'common/modal';
