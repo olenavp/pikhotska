@@ -2000,7 +2000,7 @@ li {
   letter-spacing: 0.08em;
   text-transform: uppercase;
   padding: 14px 38px;
-  border-radius: 30px;
+  border-radius: 8px;
   border: 1px solid #d3dee4;
   box-shadow: 0 4px 16px rgba(43, 49, 71, 0.05);
   text-decoration: none;
@@ -2103,7 +2103,7 @@ li {
   font-size: 13px;
   font-weight: 600;
   padding: 8px 16px;
-  border-radius: 20px;
+  border-radius: 8px;
   text-decoration: none;
   box-shadow: 0 2px 8px rgba(43, 49, 71, 0.05);
   transition: all 0.2s ease;
@@ -2403,7 +2403,7 @@ li {
   color: #ffffff;
   font-size: 13px;
   font-weight: 600;
-  border-radius: 10px;
+  border-radius: 8px;
   border: none;
   cursor: pointer;
   text-decoration: none;
@@ -2424,7 +2424,7 @@ li {
   color: #2B3147;
   font-size: 13px;
   font-weight: 600;
-  border-radius: 10px;
+  border-radius: 8px;
   border: none;
   cursor: pointer;
   text-decoration: none;
@@ -2513,7 +2513,7 @@ li {
   font-size: 14px;
   font-weight: 700;
   padding: 14px 30px;
-  border-radius: 30px;
+  border-radius: 8px;
   border: none;
   cursor: pointer;
   text-decoration: none;
@@ -2535,7 +2535,7 @@ li {
   font-size: 14px;
   font-weight: 600;
   padding: 13px 26px;
-  border-radius: 30px;
+  border-radius: 8px;
   border: 1px solid rgba(255, 255, 255, 0.25);
   cursor: pointer;
   text-decoration: none;

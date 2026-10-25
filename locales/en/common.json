@@ -106,7 +106,7 @@
     "navitem1": "About me",
     "navitem2": "Consultations",
     "navitem3": "Testimonials",
-    "copyright": "© 2025 Yuliia Pihotska"
+    "copyright": "© {{year}} Yuliia Pihotska"
   },
   "form": {
     "title": "Please leave your details. I will contact you shortly to arrange our meeting.",

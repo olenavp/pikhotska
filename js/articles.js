@@ -146,6 +146,15 @@ export function renderArticleCards(container, articles, options = {}) {
     .join('');
 }
 
+export function updateFooterYear() {
+  const footerP = document.querySelector('.footer__bottom p');
+  if (footerP && !footerP.hasAttribute('data-i18n')) {
+    const currentYear = new Date().getFullYear();
+    const yearText = currentYear > 2025 ? `2025–${currentYear}` : '2025';
+    footerP.textContent = `© ${yearText} Юлія Піхоцька`;
+  }
+}
+
 export async function initHomeArticles() {
   const container = document.getElementById('articlesGrid');
   if (!container) return;
@@ -155,6 +164,7 @@ export async function initHomeArticles() {
 }
 
 export async function initSingleArticlePage() {
+  updateFooterYear();
   const articles = await fetchArticles();
   if (articles.length === 0) return;
 

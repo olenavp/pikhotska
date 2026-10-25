@@ -12,10 +12,16 @@ i18next
     setActiveLangButton();
   });
 
+export function getCopyrightYear() {
+  const currentYear = new Date().getFullYear();
+  return currentYear > 2025 ? `2025–${currentYear}` : '2025';
+}
+
 function updateContent() {
+  const year = getCopyrightYear();
   document.querySelectorAll("[data-i18n]").forEach(el => {
     const key = el.getAttribute("data-i18n");
-    el.textContent = i18next.t(key);
+    el.textContent = i18next.t(key, { year });
   });
 }
 
