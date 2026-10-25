@@ -1,0 +1,320 @@
+<!doctype html>
+<html lang="uk">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="color-scheme" content="light" />
+
+    <title>Стаття | Психолог Юлія Піхоцька</title>
+    <meta
+      name="description"
+      content="Корисні статті та практичні рекомендації від психолога-консультанта Юлії Піхоцької."
+    />
+
+    <link rel="icon" href="./favicon.png" />
+    <link
+      rel="preload"
+      href="./fonts/Manrope-Regular.woff2"
+      as="font"
+      type="font/woff2"
+      crossorigin
+    />
+    <link rel="stylesheet" href="./css/main.min.css?v=2" />
+  </head>
+
+  <body>
+    <header class="page-header">
+      <div class="container page-header__container">
+        <a href="./index.html" class="logo page-header__logo">
+          <picture>
+            <source srcset="./images/logo.webp" type="image/webp" />
+            <img src="./images/logo.png" alt="Логотип Психолог Юлія Піхоцька" height="50" />
+          </picture>
+        </a>
+        <div class="menu-container" id="menu-container" data-menu>
+          <nav class="main-nav">
+            <ul class="main-nav__list">
+              <li class="main-nav__item">
+                <a href="./index.html#about" class="main-nav__link">Про мене</a>
+              </li>
+              <li class="main-nav__item">
+                <a href="./index.html#requests" class="main-nav__link">Ваші запити</a>
+              </li>
+              <li class="main-nav__item">
+                <a href="./index.html#methods" class="main-nav__link">Мої методи</a>
+              </li>
+              <li class="main-nav__item">
+                <a href="./index.html#consultations" class="main-nav__link">Консультації</a>
+              </li>
+              <li class="main-nav__item">
+                <a href="./index.html#reviews" class="main-nav__link">Відгуки</a>
+              </li>
+              <li class="main-nav__item">
+                <a href="./index.html#faq" class="main-nav__link">Часті питання</a>
+              </li>
+              <li class="main-nav__item">
+                <a href="./index.html#articles" class="main-nav__link main-nav__link--current"
+                  >Статті</a
+                >
+              </li>
+            </ul>
+          </nav>
+          <button type="button" class="header__contact-btn contactBtn" id="contactBtnMobile">
+            Записатися на консультацію
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <main class="article-page">
+      <div class="container">
+        <div class="article-top-nav">
+          <nav class="breadcrumbs" aria-label="Breadcrumb">
+            <a href="./index.html">Головна</a>
+            <span class="breadcrumbs__separator">/</span>
+            <a href="./index.html#articles">Статті</a>
+            <span class="breadcrumbs__separator">/</span>
+            <span class="breadcrumbs__current" id="breadcrumbCurrent">Завантаження статті...</span>
+          </nav>
+          <a href="./index.html#articles" class="article-back-btn"> &larr; Назад до всіх статей </a>
+        </div>
+
+        <header class="article-header">
+          <h1 class="article-page-title" id="articleTitle">Завантаження...</h1>
+
+          <div class="article-header-meta">
+            <div class="article-header-meta__left">
+              <span class="article-header-meta__author">Юлія Піхоцька</span>
+              <span class="article-header-meta__bullet" aria-hidden="true">•</span>
+              <span class="article-header-meta__date" id="articleDate"></span>
+              <span class="article-header-meta__bullet" aria-hidden="true">•</span>
+              <span class="article-header-meta__read-time" id="articleReadTime"></span>
+            </div>
+
+            <div class="article-share">
+              <span class="article-share__label">Поділитися</span>
+              <div class="article-share__links">
+                <a
+                  href="#"
+                  class="article-share__btn"
+                  id="shareTelegram"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="Поділитися в Telegram"
+                  data-tooltip="Telegram"
+                >
+                  <svg viewBox="0 0 32 32" fill="currentColor">
+                    <path
+                      d="M28.3 4.2c-.4-.4-1-.5-1.5-.3L2.7 13.8c-.6.2-.9.8-.9 1.4.1.6.5 1.1 1.1 1.3l6.4 2.2 2.5 7.6c.2.6.7 1 1.3 1 .2 0 .4 0 .6-.1.5-.2.8-.5 1-1l3.5-4.4 6.2 4.7c.3.2.7.4 1.1.4.2 0 .4 0 .6-.1.6-.3 1-.8 1-1.4l4.5-20.2c.1-.5 0-1.1-.3-1.4zm-14.7 14l11.4-9.8-9.4 11.2-.4 3.7-1.6-5.1z"
+                    />
+                  </svg>
+                </a>
+                <a
+                  href="#"
+                  class="article-share__btn"
+                  id="shareFacebook"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="Поділитися у Facebook"
+                  data-tooltip="Facebook"
+                >
+                  <svg viewBox="0 0 24 24" fill="currentColor">
+                    <path
+                      d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"
+                    />
+                  </svg>
+                </a>
+                <button
+                  type="button"
+                  class="article-share__btn"
+                  id="shareCopyLink"
+                  aria-label="Скопіювати посилання"
+                  data-tooltip="Скопіювати посилання"
+                >
+                  <svg
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  >
+                    <path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71" />
+                    <path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71" />
+                  </svg>
+                </button>
+              </div>
+            </div>
+          </div>
+        </header>
+
+        <div class="article-hero-media" id="articleHeroMedia"></div>
+
+        <div class="article-layout">
+          <div class="article-content" id="articleBody">
+            <p>Завантаження змісту...</p>
+          </div>
+
+          <aside class="article-sidebar">
+            <div class="sidebar-widget sidebar-author">
+              <h3 class="sidebar-author__title">Юлія Піхоцька</h3>
+              <p class="sidebar-author__subtitle">
+                Дипломований психолог, психолог-консультант, Член ГС «Національна психологічна
+                асоціація»
+              </p>
+              <div class="sidebar-author__actions">
+                <button type="button" class="sidebar-author__btn-primary contactBtn">
+                  Записатися на консультацію &rarr;
+                </button>
+                <a href="./index.html#about" class="sidebar-author__btn-secondary">
+                  Детальніше про мене
+                </a>
+              </div>
+            </div>
+
+            <div class="sidebar-widget sidebar-related">
+              <h4 class="sidebar-related__heading">Вам також може бути цікаво:</h4>
+              <ul class="sidebar-related__list" id="sidebarRelatedList"></ul>
+            </div>
+          </aside>
+        </div>
+      </div>
+
+      <section class="article-cta-banner">
+        <div class="container">
+          <p class="article-cta-banner__text">
+            Запишіться на первинну консультацію, щоб знайти безпечний простір для відвертого діалогу
+            та перших кроків до внутрішньої рівноваги.
+          </p>
+          <div class="article-cta-banner__actions">
+            <button type="button" class="article-cta-banner__btn-white contactBtn">
+              Записатися на консультацію &rarr;
+            </button>
+            <a
+              href="https://t.me/yuliiapikhotska"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="article-cta-banner__btn-telegram"
+            >
+              <svg viewBox="0 0 32 32">
+                <path
+                  d="M28.3 4.2c-.4-.4-1-.5-1.5-.3L2.7 13.8c-.6.2-.9.8-.9 1.4.1.6.5 1.1 1.1 1.3l6.4 2.2 2.5 7.6c.2.6.7 1 1.3 1 .2 0 .4 0 .6-.1.5-.2.8-.5 1-1l3.5-4.4 6.2 4.7c.3.2.7.4 1.1.4.2 0 .4 0 .6-.1.6-.3 1-.8 1-1.4l4.5-20.2c.1-.5 0-1.1-.3-1.4zm-14.7 14l11.4-9.8-9.4 11.2-.4 3.7-1.6-5.1z"
+                />
+              </svg>
+              Написати в Telegram
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <section class="article-related-section">
+        <div class="container">
+          <div class="article-related-section__header">
+            <div>
+              <span class="article-related-section__tag">База знань</span>
+              <h2 class="article-related-section__title">Схожі статті та матеріали</h2>
+            </div>
+            <a href="./index.html#articles" class="article-related-section__link">
+              Усі статті &rarr;
+            </a>
+          </div>
+
+          <div class="articles-grid" id="relatedArticlesGrid"></div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="page-footer footer">
+      <div class="footer__content">
+        <div class="footer__info">
+          <h2 class="footer__title">Юлія Піхоцька</h2>
+          <p>Практичний психолог</p>
+          <button type="button" class="contactBtn footer__btn">Консультація</button>
+        </div>
+        <div class="footer-contacts">
+          <p>
+            <span>Email: </span>
+            <a target="_blank" href="mailto:yuliiapikhotska@gmail.com">yuliiapikhotska@gmail.com</a>
+          </p>
+          <p>
+            <span>Телефон: </span>
+            <a target="_blank" href="tel:+380993679311">+38 099 367 9311</a>
+          </p>
+        </div>
+        <nav class="footer__nav">
+          <ul>
+            <li><a href="./index.html#about">Про мене</a></li>
+            <li><a href="./index.html#consultations">Консультації</a></li>
+            <li><a href="./index.html#reviews">Відгуки</a></li>
+            <li><a href="./index.html#articles">Статті</a></li>
+          </ul>
+        </nav>
+      </div>
+      <div class="footer__bottom">
+        <p>© 2025 Юлія Піхоцька</p>
+      </div>
+    </footer>
+
+    <div class="modal is-hidden" id="contactModal">
+      <div class="modal__content-wrapper">
+        <span class="modal__close" id="contactClose">&times;</span>
+        <form
+          id="contactForm"
+          class="form"
+          action="https://formsubmit.co/yuliiapikhotska@gmail.com"
+          method="POST"
+        >
+          <h2>
+            Залиште, будь ласка, ваші дані. Я зв'яжусь з Вами найближчим часом для узгодження нашої
+            зустрічі.
+          </h2>
+
+          <label for="name">Ім'я</label>
+          <input type="text" id="name" name="name" required autofocus minlength="2" />
+
+          <label for="tel">Телефон</label>
+          <input
+            type="tel"
+            id="tel"
+            name="tel"
+            required
+            pattern="^\+?\d{7,15}$"
+            placeholder="+380..."
+          />
+
+          <label for="messenger">В якому месенджері вам зручно зв'язатися</label>
+          <input type="text" id="messenger" name="messenger" />
+
+          <label for="message">Повідомлення</label>
+          <textarea id="message" name="message"></textarea>
+
+          <input
+            type="hidden"
+            name="_subject"
+            value="Нове повідомлення з сайту (зі сторінки статті)"
+          />
+          <input type="hidden" name="_captcha" value="false" />
+          <input type="hidden" name="_template" value="table" />
+          <input type="hidden" name="_next" value="https://yuliiapikhotska.com" />
+          <input type="text" name="website" style="display: none" />
+          <input type="hidden" id="ts" name="timestamp" />
+
+          <button type="submit" id="contactSubmit">Відправити</button>
+          <div id="formMessage" style="margin-top: 10px; color: green; display: none">
+            Форма відправлена!
+          </div>
+        </form>
+      </div>
+    </div>
+
+    <script type="module">
+      import { initSingleArticlePage } from './js/articles.js';
+      import './js/contactModal.js';
+
+      document.addEventListener('DOMContentLoaded', () => {
+        initSingleArticlePage();
+      });
+    </script>
+  </body>
+</html>

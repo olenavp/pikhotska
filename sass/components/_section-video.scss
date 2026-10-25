@@ -3,267 +3,263 @@
 @use '../utils/placeholders' as *;
 
 .section-video {
-    text-align: center;
-    padding: 60px 0;
+  text-align: center;
+  padding: 60px 0;
 
-    .video-wrapper {
-        max-width: 900px;
-        margin: 0 auto 40px;
-        border-radius: 12px;
-        overflow: hidden;
-        box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
+  .video-wrapper {
+    max-width: 900px;
+    margin: 0 auto 40px;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
 
-        iframe {
-            width: 100%;
-            height: 500px;
-            border: none;
-        }
+    iframe {
+      width: 100%;
+      height: 500px;
+      border: none;
     }
+  }
 
-    .consultation-block {
-        max-width: 700px;
-        margin: 0 auto;
+  .consultation-block {
+    max-width: 700px;
+    margin: 0 auto;
+  }
+
+  .consultation-prices {
+    @extend %list;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+
+    &__item {
+      display: flex;
+      justify-content: space-between;
+      border-radius: 10px;
+      padding: 8px 12px;
+      font-size: 18px;
+      transition: all 0.3s ease;
+
+      span {
+        color: $primary-text-color;
+      }
+
+      strong {
+        color: $dark-accent-color;
+        font-size: 20px;
+      }
     }
-
-    .consultation-prices {
-        @extend %list;
-        display: flex;
-        flex-direction: column;
-        gap: 12px;
-
-        &__item {
-            display: flex;
-            justify-content: space-between;
-            border-radius: 10px;
-            padding: 8px 12px;
-            font-size: 18px;
-            transition: all 0.3s ease;
-
-            span {
-                color: $primary-text-color;
-            }
-
-            strong {
-                color: $dark-accent-color;
-                font-size: 20px;
-            }
-        }
-    }
+  }
 }
 
 @media screen and (max-width: 768px) {
-    .section-video {
-        .video-wrapper iframe {
-            height: 300px;
-        }
-
-        .consultation-title {
-            font-size: 28px ! important;
-        }
-
-        .consultation-prices__item {
-            flex-direction: column;
-            align-items: center;
-            text-align: center;
-            gap: 8px;
-        }
+  .section-video {
+    .video-wrapper iframe {
+      height: 300px;
     }
+
+    .consultation-title {
+      font-size: 28px !important;
+    }
+
+    .consultation-prices__item {
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      gap: 8px;
+    }
+  }
 }
 
 .contact-box {
-    margin: 40px auto;
-    border-radius: 12px;
+  margin: 40px auto;
+  border-radius: 12px;
+  text-align: center;
+
+  .contact-text {
+    font-size: 20px;
+    font-weight: 700;
+    margin-bottom: 20px;
+  }
+
+  .contactBtn {
+    display: inline-flex;
+    align-items: center;
+    width: 100%;
+    max-width: 280px;
+    min-height: 60px;
+    gap: 8px;
+
+    margin: 0 auto 20px;
+    padding: 12px 20px;
+
+    background: linear-gradient(180deg, #ffffff 0%, #d3dee4 50%, #ffffff 100%);
+
+    color: $dark-accent-color;
+
+    font-size: 14px;
+    font-weight: 700;
     text-align: center;
 
-    .contact-text {
-        font-size: 20px;
-        font-weight: 700;
-        margin-bottom: 20px;
+    border: 1px solid $dark-accent-color;
+    border-radius: 8px;
+
+    cursor: pointer;
+    transition:
+      background 0.3s ease,
+      color 0.3s ease;
+
+    &:hover {
+      background: #003a79;
+      color: $primary-white-color;
     }
 
-    .contactBtn {
-        display: inline-flex;
-        align-items: center;
-        width: 100%;
-        max-width: 280px;
-        min-height: 60px;
-        gap: 8px;
-
-        margin: 0 auto 20px;
-        padding: 12px 20px;
-
-        background: linear-gradient(180deg,
-                #ffffff 0%,
-                #d3dee4 50%,
-                #ffffff 100%);
-
-        color: $dark-accent-color;
-
-        font-size: 14px;
-        font-weight: 700;
-        text-align: center;
-
-        border: 1px solid $dark-accent-color;
-        border-radius: 8px;
-
-        cursor: pointer;
-        transition: background 0.3s ease, color 0.3s ease;
-
-        &:hover {
-            background: #003a79;
-            color: $primary-white-color;
-        }
-
-        @media screen and (min-width: 480px) {
-            max-width: 350px;
-            font-size: 18px;
-        }
-
-        @media screen and (min-width: 768px) {
-            max-width: 350px;
-            font-size: 18px;
-        }
-
-        @media screen and (min-width: 1440px) {
-            margin-bottom: 30px;
-        }
+    @media screen and (min-width: 480px) {
+      max-width: 350px;
+      font-size: 18px;
     }
 
-    .contact-links {
-        display: flex;
-        flex-direction: column;
-        gap: 8px;
-
-        @media screen and (min-width: 1200px) {
-            flex-direction: row;
-            justify-content: center;
-            gap: 20px;
-        }
+    @media screen and (min-width: 768px) {
+      max-width: 350px;
+      font-size: 18px;
     }
 
-    .contact-link {
-        display: flex;
-        align-items: center;
-        justify-content: flex-start;
-        width: 100%;
-        max-width: 280px;
-        gap: 8px;
-        margin: 10px auto;
-        padding: 12px;
-        border-radius: 8px;
-        font-size: 16px;
-        font-weight: 700;
-        text-decoration: none;
-        color: $primary-white-color;
-        transition: all 0.3s ease;
-
-        @media screen and (min-width: 480px) {
-            max-width: 350px;
-            font-size: 18px;
-        }
-
-        @media screen and (min-width:768px) {
-            padding: 12px 20px;
-            font-size: 18px;
-            max-width: 350px;
-        }
-
-        @media screen and (min-width: 1440px) {
-            margin: 0;
-        }
-
-
-        &.whatsapp {
-            background: #25D366;
-
-            &:hover {
-                background: #1da851;
-            }
-        }
-
-        &.telegram {
-            background: #0088cc;
-
-            &:hover {
-                background: #0077b3;
-            }
-        }
-
-        &.phone {
-            background: #4a6fa5;
-
-            &:hover {
-                background: #3a5782;
-            }
-        }
-
-        &.instagram {
-            background: linear-gradient(135deg, #a85ca8, #d76d77, #f3a183);
-
-            &:hover {
-                filter: brightness(1.08);
-            }
-        }
+    @media screen and (min-width: 1440px) {
+      margin-bottom: 30px;
     }
+  }
+
+  .contact-links {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+
+    @media screen and (min-width: 1200px) {
+      flex-direction: row;
+      justify-content: center;
+      gap: 20px;
+    }
+  }
+
+  .contact-link {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    width: 100%;
+    max-width: 280px;
+    gap: 8px;
+    margin: 10px auto;
+    padding: 12px;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: 700;
+    text-decoration: none;
+    color: $primary-white-color;
+    transition: all 0.3s ease;
+
+    @media screen and (min-width: 480px) {
+      max-width: 350px;
+      font-size: 18px;
+    }
+
+    @media screen and (min-width: 768px) {
+      padding: 12px 20px;
+      font-size: 18px;
+      max-width: 350px;
+    }
+
+    @media screen and (min-width: 1440px) {
+      margin: 0;
+    }
+
+    &.whatsapp {
+      background: #25d366;
+
+      &:hover {
+        background: #1da851;
+      }
+    }
+
+    &.telegram {
+      background: #0088cc;
+
+      &:hover {
+        background: #0077b3;
+      }
+    }
+
+    &.phone {
+      background: #4a6fa5;
+
+      &:hover {
+        background: #3a5782;
+      }
+    }
+
+    &.instagram {
+      background: linear-gradient(135deg, #a85ca8, #d76d77, #f3a183);
+
+      &:hover {
+        filter: brightness(1.08);
+      }
+    }
+  }
 }
 
 .youtube-facade {
-    position: relative;
-    width: 100%;
-    max-width: 800px;
-    margin: 0 auto 60px;
-    cursor: pointer;
-    overflow: hidden;
-    border-radius: 12px;
-    background: $dark-accent-color;
+  position: relative;
+  width: 100%;
+  max-width: 800px;
+  margin: 0 auto 60px;
+  cursor: pointer;
+  overflow: hidden;
+  border-radius: 12px;
+  background: $dark-accent-color;
 }
 
 .youtube-facade img {
-    width: 100%;
-    height: auto;
-    display: block;
-    filter: brightness(0.8);
-    transition: filter 0.3s;
+  width: 100%;
+  height: auto;
+  display: block;
+  filter: brightness(0.8);
+  transition: filter 0.3s;
 }
 
 .youtube-facade:hover img {
-    filter: brightness(1);
+  filter: brightness(1);
 }
 
 .youtube-wrapper {
-    position: relative;
-    width: 100%;
-    padding-top: 56.25%;
-    /* 16:9 aspect ratio */
-    overflow: hidden;
+  position: relative;
+  width: 100%;
+  padding-top: 56.25%;
+  overflow: hidden;
 }
 
 .youtube-wrapper img,
 .youtube-wrapper iframe {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
-
 .play-button {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    font-size: 2rem;
-    background: rgba(0, 0, 0, 0.5);
-    border: none;
-    color: #fff;
-    cursor: pointer;
-    border-radius: 50%;
-    padding: 0.5rem 0.7rem;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 2rem;
+  background: rgba(0, 0, 0, 0.5);
+  border: none;
+  color: #fff;
+  cursor: pointer;
+  border-radius: 50%;
+  padding: 0.5rem 0.7rem;
 }
 
 .play-button:hover {
-    background: $light-accent-color;
-    color: $dark-accent-color;
+  background: $light-accent-color;
+  color: $dark-accent-color;
 }
