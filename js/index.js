@@ -7,4 +7,3 @@ import './modal.js';
 import './i18next.js';
 import './contactModal.js';
 import './validation.js';
-import './chat.js';
