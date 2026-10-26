@@ -1,704 +1,896 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="uk">
-
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="color-scheme" content="light">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="color-scheme" content="light" />
 
     <title>Психолог Юлія Піхоцька</title>
-    <meta name="description"
-        content="Психолог-консультант Юлія Піхоцька – індивідуальні і парні консультації. Дізнайтеся про методи роботи та запис на консультацію.">
+    <meta
+      name="description"
+      content="Психолог-консультант Юлія Піхоцька – індивідуальні і парні консультації. Дізнайтеся про методи роботи та запис на консультацію."
+    />
 
-    <link rel="icon" href="favicon.png">
+    <link rel="icon" href="favicon.png" />
 
-    <link rel="preload" as="image" href="./images/hero/yuliia-1440.webp"
-        imagesrcset="./images/hero/yuliia-480.webp 480w, ./images/hero/yuliia-1440.webp 1440w" imagesizes="100vw">
-    <link rel="preload" href="./fonts/Manrope-Regular.woff2" as="font" type="font/woff2" crossorigin>
+    <link
+      rel="preload"
+      as="image"
+      href="./images/hero/yuliia-1440.webp"
+      imagesrcset="./images/hero/yuliia-480.webp 480w, ./images/hero/yuliia-1440.webp 1440w"
+      imagesizes="100vw"
+    />
+    <link
+      rel="preload"
+      href="./fonts/Manrope-Regular.woff2"
+      as="font"
+      type="font/woff2"
+      crossorigin
+    />
 
-    <link rel="stylesheet" href="./css/main.min.css">
+    <link rel="stylesheet" href="./css/main.min.css" />
     <script src="https://unpkg.com/just-validate@latest/dist/just-validate.production.min.js"></script>
+  </head>
 
-</head>
-
-<body>
+  <body>
     <header class="page-header">
-        <div class="container page-header__container ">
-            <a href="./index.html" class="logo page-header__logo">
-                <picture>
-                    <source srcset="./images/logo.webp" type="image/webp">
-                    <img src="./images/logo.png" alt="Логотип Психолог Юлія Піхоцька" height="50">
-                </picture>
-            </a>
-            <div class="menu-container" id="menu-container" data-menu>
-                <nav class="main-nav">
-                    <ul class="main-nav__list">
-                        <li class="main-nav__item">
-                            <a href="#about" class="main-nav__link main-nav__link--current" data-i18n="menu.about">Про
-                                мене</a>
-                        </li>
-                        <li class="main-nav__item">
-                            <a href="#requests" class="main-nav__link" data-i18n="menu.requests">Ваши запити</a>
-                        </li>
-                        <li class="main-nav__item">
-                            <a href="#methods" class="main-nav__link" data-i18n="menu.methods">Мої методи</a>
-                        </li>
-                        <li class="main-nav__item">
-                            <a href="#consultations" class="main-nav__link"
-                                data-i18n="menu.consultations">Консультації</a>
-                        </li>
-                        <li class="main-nav__item">
-                            <a href="#reviews" class="main-nav__link" data-i18n="menu.reviews">Відгуки</a>
-                        </li>
-                        <li class="main-nav__item">
-                            <a href="#faq" class="main-nav__link" data-i18n="menu.faq">Часті питання</a>
-                        </li>
-                        <li class="main-nav__item">
-                            <a href="#articles" class="main-nav__link">Статті</a>
-                        </li>
-                    </ul>
-                </nav>
-                <button type="button" class="header__contact-btn" id="contactBtnMobile" data-i18n="menu.button">
-                    Записатися на консультацію
-                </button>
-                <div class="lang-switch">
-                    <button onclick="changeLang('uk')">UA</button>
-                    <button onclick="changeLang('en')">EN</button>
-                </div>
-            </div>
-            <button type="button" class="menu-button" aria-expanded="false" aria-controls="menu-container"
-                data-menu-button>
-
-                <svg width="40" height="40" aria-label="Перемикач мобільного меню">
-                    <use class="menu-button__icon-burger" href="./images/icons.svg#icon-menu-burger"></use>
-                    <use class="menu-button__icon-cross" href="./images/icons.svg#icon-menu-close"></use>
-                </svg>
-            </button>
+      <div class="container page-header__container">
+        <a href="./index.html" class="logo page-header__logo">
+          <img src="./images/logo.PNG" alt="Логотип Юлія Піхоцька" class="logo__icon" />
+          <span class="logo__brand">
+            <span class="logo__name">YULIIA</span>
+            <span class="logo__sub">PIKHOTSKA</span>
+          </span>
+        </a>
+        <div class="menu-container" id="menu-container" data-menu>
+          <nav class="main-nav">
+            <ul class="main-nav__list">
+              <li class="main-nav__item">
+                <a
+                  href="#about"
+                  class="main-nav__link main-nav__link--current"
+                  data-i18n="menu.about"
+                  >Про мене</a
+                >
+              </li>
+              <li class="main-nav__item">
+                <a href="#requests" class="main-nav__link" data-i18n="menu.requests">Ваши запити</a>
+              </li>
+              <li class="main-nav__item">
+                <a href="#methods" class="main-nav__link" data-i18n="menu.methods">Мої методи</a>
+              </li>
+              <li class="main-nav__item">
+                <a href="#consultations" class="main-nav__link" data-i18n="menu.consultations"
+                  >Консультації</a
+                >
+              </li>
+              <li class="main-nav__item">
+                <a href="#reviews" class="main-nav__link" data-i18n="menu.reviews">Відгуки</a>
+              </li>
+              <li class="main-nav__item">
+                <a href="#faq" class="main-nav__link" data-i18n="menu.faq">Часті питання</a>
+              </li>
+              <li class="main-nav__item">
+                <a href="#articles" class="main-nav__link">Статті</a>
+              </li>
+            </ul>
+          </nav>
+          <button
+            type="button"
+            class="header__contact-btn"
+            id="contactBtnMobile"
+            data-i18n="menu.button"
+          >
+            Записатися на консультацію
+          </button>
+          <div class="lang-switch">
+            <button onclick="changeLang('uk')">UA</button>
+            <button onclick="changeLang('en')">EN</button>
+          </div>
         </div>
+        <button
+          type="button"
+          class="menu-button"
+          aria-expanded="false"
+          aria-controls="menu-container"
+          data-menu-button
+        >
+          <svg width="40" height="40" aria-label="Перемикач мобільного меню">
+            <use class="menu-button__icon-burger" href="./images/icons.svg#icon-menu-burger"></use>
+            <use class="menu-button__icon-cross" href="./images/icons.svg#icon-menu-close"></use>
+          </svg>
+        </button>
+      </div>
     </header>
 
     <main>
-        <section class="hero-section" id="hero">
-            <div class="container">
-                <div class="hero-section__image-wrapper">
-                    <picture>
-                        <!-- WebP -->
-                        <source type="image/webp" srcset="./images/hero/yuliia-480.webp" media="(max-width: 767px)" />
-                        <source type="image/webp" srcset="./images/hero/yuliia-1440.webp" media="(min-width: 768px)" />
-                        <source type="image/webp" srcset="./images/hero/yuliia-1920.webp" media="(min-width: 1440px)" />
+      <section class="hero-section" id="hero">
+        <div class="container">
+          <div class="hero-section__image-wrapper">
+            <picture>
+              <!-- WebP -->
+              <source
+                type="image/webp"
+                srcset="./images/hero/yuliia-480.webp"
+                media="(max-width: 767px)"
+              />
+              <source
+                type="image/webp"
+                srcset="./images/hero/yuliia-1440.webp"
+                media="(min-width: 768px)"
+              />
+              <source
+                type="image/webp"
+                srcset="./images/hero/yuliia-1920.webp"
+                media="(min-width: 1440px)"
+              />
 
-                        <!-- JPEG fallback -->
-                        <source type="image/jpeg" srcset="./images/hero/yuliia-480.jpg" media="(max-width: 767px)" />
-                        <source type="image/jpeg" srcset="./images/hero/yuliia-1440.jpg" media="(min-width: 768px)" />
-                        <source type="image/jpeg" srcset="./images/hero/yuliia-1920.jpg" media="(min-width: 1440px)" />
+              <!-- JPEG fallback -->
+              <source
+                type="image/jpeg"
+                srcset="./images/hero/yuliia-480.jpg"
+                media="(max-width: 767px)"
+              />
+              <source
+                type="image/jpeg"
+                srcset="./images/hero/yuliia-1440.jpg"
+                media="(min-width: 768px)"
+              />
+              <source
+                type="image/jpeg"
+                srcset="./images/hero/yuliia-1920.jpg"
+                media="(min-width: 1440px)"
+              />
 
-                        <img src="./images/hero/yuliia-480.jpg" alt="Психолог Юлія Піхоцька" class="hero-section__image"
-                            width="600" height="900" />
-                    </picture>
+              <img
+                src="./images/hero/yuliia-480.jpg"
+                alt="Психолог Юлія Піхоцька"
+                class="hero-section__image"
+                width="600"
+                height="900"
+              />
+            </picture>
 
+            <div class="hero-section__content">
+              <h1 class="hero-section__title">
+                <span data-i18n="hero.title1"> Дипломований психолог, </span>
+                <br />
+                <span data-i18n="hero.title2"> психолог консультант </span>
+              </h1>
+              <h2 class="hero-section__subtitle" data-i18n="hero.subtitle">
+                Член ГС «Національна психологічна асоціація»
+              </h2>
 
-                    <div class="hero-section__content">
-                        <h1 class="hero-section__title">
-                            <span data-i18n="hero.title1">
-                                Дипломований психолог,
-                            </span>
-                            <br />
-                            <span data-i18n="hero.title2">
-                                психолог консультант
-                            </span>
-                        </h1>
-                        <h2 class="hero-section__subtitle" data-i18n="hero.subtitle">
-                            Член ГС «Національна психологічна асоціація»
-                        </h2>
+              <div class="hero-section__actions">
+                <button type="button" class="contactBtn hero-section__btn" data-i18n="hero.button">
+                  Записатися на консультацію
+                </button>
 
-                        <div class="hero-section__actions">
-                            <button type="button" class="contactBtn hero-section__btn" data-i18n="hero.button">
-                                Записатися на консультацію
-                            </button>
-
-                            <a href="#consultations" class="hero-section__btn hero-section__btn--secondary"
-                                data-i18n="hero.secondary_button">
-                                Дізнатися більше
-                            </a>
-                        </div>
-
-                    </div>
-                </div>
+                <a
+                  href="#consultations"
+                  class="hero-section__btn hero-section__btn--secondary"
+                  data-i18n="hero.secondary_button"
+                >
+                  Дізнатися більше
+                </a>
+              </div>
             </div>
-        </section>
+          </div>
+        </div>
+      </section>
 
-        <section id="about" class="section">
-            <div class="container">
-                <h2 class="about-title section__title" data-i18n="about.title">Основи моєї професійної діяльності</h2>
-                <p class="section__subtitle" data-i18n="about.text">У сфері безперервного навчання я спираюся на
-                    наступні
-                    принципи:</p>
-                <div class="about-wrapper">
-                    <ul class="about-list">
-                        <li class="about-list__item">
-                            <span data-i18n="about.list.item1-1" class="bold">
-                                Супервізії
-                            </span>
-                            <br>
-                            <span data-i18n="about.list.item1-2">
-                                фаховий супровід та психологічна підтримка у професійній практиці
-                            </span>
+      <section id="about" class="section">
+        <div class="container">
+          <h2 class="about-title section__title" data-i18n="about.title">
+            Основи моєї професійної діяльності
+          </h2>
+          <p class="section__subtitle" data-i18n="about.text">
+            У сфері безперервного навчання я спираюся на наступні принципи:
+          </p>
+          <div class="about-wrapper">
+            <ul class="about-list">
+              <li class="about-list__item">
+                <span data-i18n="about.list.item1-1" class="bold"> Супервізії </span>
+                <br />
+                <span data-i18n="about.list.item1-2">
+                  фаховий супровід та психологічна підтримка у професійній практиці
+                </span>
+              </li>
+              <li class="about-list__item">
+                <span data-i18n="about.list.item2-1" class="bold"> Інтервізії </span>
+                <br />
+                <span data-i18n="about.list.item2-2">
+                  професійна взаємопідтримка й обмін досвідом між колегами
+                </span>
+              </li>
+              <li class="about-list__item">
+                <span data-i18n="about.list.item3-1" class="bold"> Навчання </span>
+                <br />
+                <span data-i18n="about.list.item3-2">
+                  регулярне вдосконалення кваліфікації та професійних компетенцій
+                </span>
+              </li>
+              <li class="about-list__item">
+                <span data-i18n="about.list.item4-1" class="bold"> Особиста терапія </span>
+                <br />
+                <span data-i18n="about.list.item4-2"> фундамент психологічного балансу </span>
+              </li>
+              <li class="about-list__item">
+                <span data-i18n="about.list.item5-1" class="bold"> Етичні норми </span>
+                <br />
+                <span data-i18n="about.list.item5-2">
+                  дотримання принципів і стандартів етичного кодексу психолога
+                </span>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </section>
 
-                        </li>
-                        <li class="about-list__item">
-                            <span data-i18n="about.list.item2-1" class="bold">
-                                Інтервізії
-                            </span>
-                            <br>
-                            <span data-i18n="about.list.item2-2">
-                                професійна взаємопідтримка й обмін досвідом між колегами
-                            </span>
-                        </li>
-                        <li class="about-list__item">
-                            <span data-i18n="about.list.item3-1" class="bold">
-                                Навчання
-                            </span>
-                            <br>
-                            <span data-i18n="about.list.item3-2">
-                                регулярне вдосконалення кваліфікації та професійних компетенцій
-                            </span>
-                        </li>
-                        <li class="about-list__item">
-                            <span data-i18n="about.list.item4-1" class="bold">
-                                Особиста терапія
-                            </span>
-                            <br>
-                            <span data-i18n="about.list.item4-2">
-                                фундамент психологічного балансу
-                            </span>
-                        </li>
-                        <li class="about-list__item">
-                            <span data-i18n="about.list.item5-1" class="bold">
-                                Етичні норми
-                            </span>
-                            <br>
-                            <span data-i18n="about.list.item5-2">
-                                дотримання принципів і стандартів етичного кодексу психолога
-                            </span>
-                        </li>
-                    </ul>
-                </div>
+      <section id="diplomas" class="section section--short section-diplomas section--background">
+        <div class="container">
+          <h2 class="section__title" data-i18n="diplomas.title">Мої дипломи і сертифікати</h2>
+
+          <div class="carousel" id="diplomaCarousel">
+            <button class="carousel__btn prev" aria-label="Попередній">&#10094;</button>
+
+            <div class="carousel__track-container">
+              <ul class="carousel__track">
+                <li class="carousel__item">
+                  <picture>
+                    <source
+                      srcset="
+                        ./images/diplomas/npa-400.webp 400w,
+                        ./images/diplomas/npa-800.webp 800w
+                      "
+                      sizes="(max-width: 600px) 90vw, 800px"
+                      type="image/webp"
+                    />
+                    <img
+                      src="./images/diplomas/npa-800.jpg"
+                      alt="Диплом НПА"
+                      width="800"
+                      height="562"
+                      loading="lazy"
+                    />
+                  </picture>
+                </li>
+
+                <li class="carousel__item">
+                  <picture>
+                    <source
+                      srcset="
+                        ./images/diplomas/gestalt-400.webp 400w,
+                        ./images/diplomas/gestalt-800.webp 800w
+                      "
+                      sizes="(max-width: 600px) 90vw, 800px"
+                      type="image/webp"
+                    />
+                    <img
+                      src="./images/diplomas/gestalt-800.jpg"
+                      alt="Гештальт сертифікат"
+                      width="800"
+                      height="525"
+                      loading="lazy"
+                    />
+                  </picture>
+                </li>
+
+                <li class="carousel__item">
+                  <picture>
+                    <source
+                      srcset="
+                        ./images/diplomas/practical-400.webp 400w,
+                        ./images/diplomas/practical-800.webp 800w
+                      "
+                      sizes="(max-width: 600px) 90vw, 800px"
+                      type="image/webp"
+                    />
+                    <img
+                      src="./images/diplomas/practical-800.png"
+                      alt="Практичний психолог"
+                      width="800"
+                      height="1151"
+                      loading="lazy"
+                    />
+                  </picture>
+                </li>
+
+                <li class="carousel__item">
+                  <picture>
+                    <source
+                      srcset="
+                        ./images/diplomas/seminar-400.webp 400w,
+                        ./images/diplomas/seminar-800.webp 800w
+                      "
+                      sizes="(max-width: 600px) 90vw, 800px"
+                      type="image/webp"
+                    />
+                    <img
+                      src="./images/diplomas/seminar-800.png"
+                      alt="Семінар"
+                      width="800"
+                      height="1125"
+                      loading="lazy"
+                    />
+                  </picture>
+                </li>
+
+                <li class="carousel__item">
+                  <picture>
+                    <source
+                      srcset="
+                        ./images/diplomas/trauma-400.webp 400w,
+                        ./images/diplomas/trauma-800.webp 800w
+                      "
+                      sizes="(max-width: 600px) 90vw, 800px"
+                      type="image/webp"
+                    />
+                    <img
+                      src="./images/diplomas/trauma-800.png"
+                      alt="Сртифікат Робота з психологічною травмою"
+                      width="800"
+                      height="1115"
+                      loading="lazy"
+                    />
+                  </picture>
+                </li>
+
+                <li class="carousel__item">
+                  <picture>
+                    <source
+                      srcset="
+                        ./images/diplomas/training-400.webp 400w,
+                        ./images/diplomas/training-800.webp 800w
+                      "
+                      sizes="(max-width: 600px) 90vw, 800px"
+                      type="image/webp"
+                    />
+                    <img
+                      src="./images/diplomas/training-800.png"
+                      alt="Сертифікат Споглядально-орієнтований тренінг травми та резильєнтності"
+                      width="800"
+                      height="1115"
+                      loading="lazy"
+                    />
+                  </picture>
+                </li>
+              </ul>
             </div>
-        </section>
 
-        <section id="diplomas" class="section section--short section-diplomas section--background">
-            <div class="container">
-                <h2 class="section__title" data-i18n="diplomas.title">Мої дипломи і сертифікати</h2>
+            <button class="carousel__btn next" aria-label="Наступний">&#10095;</button>
+          </div>
+        </div>
+      </section>
 
-                <div class="carousel" id="diplomaCarousel">
-                    <button class="carousel__btn prev" aria-label="Попередній">&#10094;</button>
+      <section id="goal" class="section section--goal">
+        <h2 class="section__title section__title--hidden">Моя мета</h2>
+        <div class="goal-wrapper">
+          <div class="goal-text-wrapper">
+            <h2 class="section__title goal-title" data-i18n="goal.title">Моя мета:</h2>
+            <p class="goal-text" data-i18n="goal.text">
+              допомагаю ставати ближчими до себе, відновлювати радість життя та формувати здорову
+              психіку
+            </p>
+          </div>
+          <img
+            srcset="
+              /images/IMG_4537-400.webp   400w,
+              /images/IMG_4537-800.webp   800w,
+              /images/IMG_4537-1200.webp 1200w
+            "
+            sizes="(max-width: 600px) 90vw,
+                            (max-width: 1024px) 50vw, 40vw"
+            src="/images/IMG_4537-800.webp"
+            alt="Фото"
+            width="600"
+            height="800"
+            loading="lazy"
+          />
+        </div>
+      </section>
 
-                    <div class="carousel__track-container">
-                        <ul class="carousel__track">
-                            <li class="carousel__item">
-                                <picture>
-                                    <source
-                                        srcset="./images/diplomas/npa-400.webp 400w, ./images/diplomas/npa-800.webp 800w"
-                                        sizes="(max-width: 600px) 90vw, 800px" type="image/webp">
-                                    <img src="./images/diplomas/npa-800.jpg" alt="Диплом НПА" width="800" height="562"
-                                        loading="lazy">
-                                </picture>
-                            </li>
+      <section id="requests" class="section section-requests section--background">
+        <div class="container">
+          <h2 class="section__title" data-i18n="requests.title">
+            Запити, з якими ви можете звернутися до мене:
+          </h2>
+          <ul class="requests-list">
+            <li class="requests-list__item">
+              <p class="requests-list__inscription" data-i18n="requests.list.item1">
+                Проблеми з адаптацією в еміграції
+              </p>
+            </li>
 
-                            <li class="carousel__item">
-                                <picture>
-                                    <source
-                                        srcset="./images/diplomas/gestalt-400.webp 400w, ./images/diplomas/gestalt-800.webp 800w"
-                                        sizes="(max-width: 600px) 90vw, 800px" type="image/webp">
-                                    <img src="./images/diplomas/gestalt-800.jpg" alt="Гештальт сертифікат" width="800"
-                                        height="525" loading="lazy">
-                                </picture>
-                            </li>
+            <li class="requests-list__item">
+              <p class="requests-list__inscription" data-i18n="requests.list.item2">
+                Опрацювання дитячо-батьківських відносин
+              </p>
+            </li>
 
-                            <li class="carousel__item">
-                                <picture>
-                                    <source
-                                        srcset="./images/diplomas/practical-400.webp 400w, ./images/diplomas/practical-800.webp 800w"
-                                        sizes="(max-width: 600px) 90vw, 800px" type="image/webp">
-                                    <img src="./images/diplomas/practical-800.png" alt="Практичний психолог" width="800"
-                                        height="1151" loading="lazy">
-                                </picture>
-                            </li>
+            <li class="requests-list__item">
+              <p class="requests-list__inscription" data-i18n="requests.list.item3">
+                Опрацювання дитячих травм
+              </p>
+            </li>
 
-                            <li class="carousel__item">
-                                <picture>
-                                    <source
-                                        srcset="./images/diplomas/seminar-400.webp 400w, ./images/diplomas/seminar-800.webp 800w"
-                                        sizes="(max-width: 600px) 90vw, 800px" type="image/webp">
-                                    <img src="./images/diplomas/seminar-800.png" alt="Семінар" width="800" height="1125"
-                                        loading="lazy">
-                                </picture>
-                            </li>
+            <li class="requests-list__item">
+              <p class="requests-list__inscription" data-i18n="requests.list.item4">
+                Робота зі страхом / конфліктами / тривожністю
+              </p>
+            </li>
 
+            <li class="requests-list__item">
+              <p class="requests-list__inscription" data-i18n="requests.list.item5">
+                Доросла терапія
+              </p>
+            </li>
 
+            <li class="requests-list__item">
+              <p class="requests-list__inscription" data-i18n="requests.list.item6">
+                Формування самооцінки
+              </p>
+            </li>
 
-                            <li class="carousel__item">
-                                <picture>
-                                    <source
-                                        srcset="./images/diplomas/trauma-400.webp 400w, ./images/diplomas/trauma-800.webp 800w"
-                                        sizes="(max-width: 600px) 90vw, 800px" type="image/webp">
-                                    <img src="./images/diplomas/trauma-800.png"
-                                        alt="Сртифікат Робота з психологічною травмою" width="800" height="1115"
-                                        loading="lazy">
-                                </picture>
-                            </li>
+            <li class="requests-list__item">
+              <p class="requests-list__inscription" data-i18n="requests.list.item7">
+                Вміння сказати «Ні»
+              </p>
+            </li>
 
-                            <li class="carousel__item">
-                                <picture>
-                                    <source
-                                        srcset="./images/diplomas/training-400.webp 400w, ./images/diplomas/training-800.webp 800w"
-                                        sizes="(max-width: 600px) 90vw, 800px" type="image/webp">
-                                    <img src="./images/diplomas/training-800.png"
-                                        alt="Сертифікат Споглядально-орієнтований тренінг травми та резильєнтності"
-                                        width="800" height="1115" loading="lazy">
-                                </picture>
-                            </li>
-                        </ul>
+            <li class="requests-list__item">
+              <p class="requests-list__inscription" data-i18n="requests.list.item8">
+                Формування особистих кордонів
+              </p>
+            </li>
 
+            <li class="requests-list__item">
+              <p class="requests-list__inscription" data-i18n="requests.list.item9">
+                Конфлікти в парі / романтичні відносини
+              </p>
+            </li>
 
-                    </div>
+            <li class="requests-list__item">
+              <p class="requests-list__inscription" data-i18n="requests.list.item10">
+                Формування дорослості
+              </p>
+            </li>
 
-                    <button class="carousel__btn next" aria-label="Наступний">&#10095;</button>
-                </div>
+            <li class="requests-list__item">
+              <p class="requests-list__inscription" data-i18n="requests.list.item11">
+                Відносини з грошима
+              </p>
+            </li>
+
+            <li class="requests-list__item">
+              <p class="requests-list__inscription" data-i18n="requests.list.item12">
+                Зміцнення внутрішньої опори
+              </p>
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <section id="methods" class="section section-methods">
+        <div class="container">
+          <h2 class="section__title" data-i18n="methods.title">Методи, з якими я працюю:</h2>
+          <p class="section__subtitle" data-i18n="methods.subtitle">
+            У роботі я використовую інтегративний підхід: поєдную різні методи, підбираючи їх під
+            індивідуальний запит. Це допомагає знайти більш ефективний шлях саме для вас.
+          </p>
+          <ul class="methods-list">
+            <li class="methods-list__item">
+              <span data-i18n="methods.list.item1">Арт-терапія</span>
+            </li>
+            <li class="methods-list__item">
+              <span data-i18n="methods.list.item2">Тілесно-орієнтована терапія</span>
+            </li>
+            <li class="methods-list__item">
+              <span data-i18n="methods.list.item3">Гештальт терапія</span>
+            </li>
+            <li class="methods-list__item">
+              <span data-i18n="methods.list.item4">Елементи символдрами</span>
+            </li>
+            <li class="methods-list__item">
+              <span data-i18n="methods.list.item5">Емоційно-образна терапія</span>
+            </li>
+            <li class="methods-list__item">
+              <span data-i18n="methods.list.item6">Позитивна психотерапія</span>
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <section id="consultations" class="section section-video section--background">
+        <div class="container">
+          <div class="youtube-facade" data-id="EHk3NvlF_7Q">
+            <div class="youtube-wrapper">
+              <img
+                src="https://img.youtube.com/vi/EHk3NvlF_7Q/hqdefault.jpg"
+                alt="YouTube video thumbnail"
+                width="480"
+                height="360"
+                loading="lazy"
+              />
+              <button class="play-button" aria-label="Play video">▶</button>
             </div>
-        </section>
+          </div>
 
-        <section id="goal" class="section section--goal ">
-            <h2 class="section__title section__title--hidden">Моя мета</h2>
-            <div class="goal-wrapper">
-                <div class="goal-text-wrapper">
-                    <h2 class="section__title goal-title" data-i18n="goal.title">Моя мета:</h2>
-                    <p class="goal-text" data-i18n="goal.text">допомагаю ставати ближчими до себе,
-                        відновлювати радість життя та формувати здорову психіку
-                    </p>
-                </div>
-                <img srcset="/images/IMG_4537-400.webp 400w,
-                            /images/IMG_4537-800.webp 800w,
-                            /images/IMG_4537-1200.webp 1200w" sizes="(max-width: 600px) 90vw,
-                            (max-width: 1024px) 50vw, 40vw" src="/images/IMG_4537-800.webp" alt="Фото" width="600"
-                    height="800" loading="lazy">
+          <div class="consultation-block">
+            <h2 class="consultation-title section__title" data-i18n="consultations.title">
+              Запрошую вас на консультацію
+            </h2>
+            <ul class="consultation-prices">
+              <li class="consultation-prices__item">
+                <span data-i18n="consultations.individual"
+                  >Вартість індивідуальної консультації 55 хв.</span
+                >
+                <strong data-i18n="consultations.individual-price">2000 грн</strong>
+              </li>
+              <li class="consultation-prices__item">
+                <span data-i18n="consultations.couple">Вартість парної консультації 90 хв.</span>
+                <strong data-i18n="consultations.couple-price">2800 грн</strong>
+              </li>
+              <li class="consultation-prices__item">
+                <span data-i18n="consultations.free"
+                  >Дружинам військовослужбовців ЗСУ перші консультації
+                </span>
+                <strong data-i18n="consultations.free-price">безкоштовно</strong>
+              </li>
+            </ul>
+          </div>
+
+          <div class="contact-box">
+            <button type="button" class="contactBtn">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="1.4em"
+                height="1.4em"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <path d="M5 12h14M13 5l7 7-7 7" />
+              </svg>
+              <span data-i18n="consultations.book"> Записатися на консультацію </span>
+            </button>
+            <div class="contact-links">
+              <a href="https://wa.me/+393517565786" target="_blank" class="contact-link whatsapp">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="2em"
+                  height="2em"
+                  viewBox="0 0 1024 1024"
+                >
+                  <path
+                    fill="#fff"
+                    d="M713.5 599.9c-10.9-5.6-65.2-32.2-75.3-35.8c-10.1-3.8-17.5-5.6-24.8 5.6c-7.4 11.1-28.4 35.8-35 43.3c-6.4 7.4-12.9 8.3-23.8 2.8c-64.8-32.4-107.3-57.8-150-131.1c-11.3-19.5 11.3-18.1 32.4-60.2c3.6-7.4 1.8-13.7-1-19.3s-24.8-59.8-34-81.9c-8.9-21.5-18.1-18.5-24.8-18.9c-6.4-.4-13.7-.4-21.1-.4s-19.3 2.8-29.4 13.7c-10.1 11.1-38.6 37.8-38.6 92s39.5 106.7 44.9 114.1c5.6 7.4 77.7 118.6 188.4 166.5c70 30.2 97.4 32.8 132.4 27.6c21.3-3.2 65.2-26.6 74.3-52.5c9.1-25.8 9.1-47.9 6.4-52.5c-2.7-4.9-10.1-7.7-21-13"
+                  />
+                  <path
+                    fill="#fff"
+                    d="M925.2 338.4c-22.6-53.7-55-101.9-96.3-143.3c-41.3-41.3-89.5-73.8-143.3-96.3C630.6 75.7 572.2 64 512 64h-2c-60.6.3-119.3 12.3-174.5 35.9c-53.3 22.8-101.1 55.2-142 96.5s-73 89.3-95.2 142.8c-23 55.4-34.6 114.3-34.3 174.9c.3 69.4 16.9 138.3 48 199.9v152c0 25.4 20.6 46 46 46h152.1c61.6 31.1 130.5 47.7 199.9 48h2.1c59.9 0 118-11.6 172.7-34.3c53.5-22.3 101.6-54.3 142.8-95.2c41.3-40.9 73.8-88.7 96.5-142c23.6-55.2 35.6-113.9 35.9-174.5c.3-60.9-11.5-120-34.8-175.6m-151.1 438C704 845.8 611 884 512 884h-1.7c-60.3-.3-120.2-15.3-173.1-43.5l-8.4-4.5H188V695.2l-4.5-8.4C155.3 633.9 140.3 574 140 513.7c-.4-99.7 37.7-193.3 107.6-263.8c69.8-70.5 163.1-109.5 262.8-109.9h1.7c50 0 98.5 9.7 144.2 28.9c44.6 18.7 84.6 45.6 119 80c34.3 34.3 61.3 74.4 80 119c19.4 46.2 29.1 95.2 28.9 145.8c-.6 99.6-39.7 192.9-110.1 262.7"
+                  />
+                </svg>
+                WhatsApp
+              </a>
+
+              <a href="https://t.me/yuliiapikhotska" target="_blank" class="contact-link telegram">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="2em"
+                  height="2em"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    fill="none"
+                    stroke="#fff"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="1.5"
+                    d="M21 5L2 12.5l7 1M21 5l-2.5 15L9 13.5M21 5L9 13.5m0 0V19l3.249-3.277"
+                  />
+                </svg>
+                Telegram
+              </a>
+
+              <a href="tel:+380993679311" class="contact-link phone">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="2em"
+                  height="2em"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    fill="none"
+                    stroke="#fff"
+                    stroke-dasharray="64"
+                    stroke-dashoffset="64"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M8 3c0.5 0 2.5 4.5 2.5 5c0 1 -1.5 2 -2 3c-0.5 1 0.5 2 1.5 3c0.39 0.39 2 2 3 1.5c1 -0.5 2 -2 3 -2c0.5 0 5 2 5 2.5c0 2 -1.5 3.5 -3 4c-1.5 0.5 -2.5 0.5 -4.5 0c-2 -0.5 -3.5 -1 -6 -3.5c-2.5 -2.5 -3 -4 -3.5 -6c-0.5 -2 -0.5 -3 0 -4.5c0.5 -1.5 2 -3 4 -3Z"
+                  >
+                    <animate
+                      fill="freeze"
+                      attributeName="stroke-dashoffset"
+                      dur="0.6s"
+                      values="64;0"
+                    />
+                  </path>
+                </svg>
+                +38 099 367 9311
+              </a>
+
+              <a
+                href="https://www.instagram.com/psy.yuliia.pikhotska"
+                target="_blank"
+                class="contact-link instagram"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="2em"
+                  height="2em"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    fill="#fff"
+                    d="M7 2C4.243 2 2 4.243 2 7v10c0 2.757 2.243 5 5 5h10c2.757 0 5-2.243 5-5V7c0-2.757-2.243-5-5-5H7zm10 2a3 3 0 0 1 3 3v10a3 3 0 0 1-3 3H7a3 3 0 0 1-3-3V7a3 3 0 0 1 3-3h10zm-5 3a5 5 0 1 0 0 10a5 5 0 0 0 0-10zm0 2a3 3 0 1 1 0 6a3 3 0 0 1 0-6zm4.5-2.5a1 1 0 1 0 0 2a1 1 0 0 0 0-2z"
+                  />
+                </svg>
+                Instagram
+              </a>
             </div>
-        </section>
+          </div>
+        </div>
+      </section>
 
-        <section id="requests" class=" section section-requests section--background">
-            <div class="container">
-                <h2 class="section__title" data-i18n="requests.title">Запити, з якими ви можете звернутися до мене:</h2>
-                <ul class="requests-list">
+      <section id="reviews" class="section section-reviews">
+        <div class="container">
+          <h2 class="section__title" data-i18n="reviews.title">Відгуки про роботу зі мною</h2>
 
-                    <li class="requests-list__item">
-                        <p class="requests-list__inscription" data-i18n="requests.list.item1">Проблеми з адаптацією в
-                            еміграції</p>
-                    </li>
-
-                    <li class="requests-list__item">
-                        <p class="requests-list__inscription" data-i18n="requests.list.item2">Опрацювання
-                            дитячо-батьківських відносин
-                        </p>
-                    </li>
-
-                    <li class="requests-list__item">
-                        <p class="requests-list__inscription" data-i18n="requests.list.item3">Опрацювання дитячих травм
-                        </p>
-                    </li>
-
-                    <li class="requests-list__item">
-                        <p class="requests-list__inscription" data-i18n="requests.list.item4">Робота зі страхом /
-                            конфліктами / тривожністю
-                        </p>
-                    </li>
-
-                    <li class="requests-list__item">
-                        <p class="requests-list__inscription" data-i18n="requests.list.item5">Доросла терапія</p>
-                    </li>
-
-                    <li class="requests-list__item">
-                        <p class="requests-list__inscription" data-i18n="requests.list.item6">Формування самооцінки</p>
-                    </li>
-
-                    <li class="requests-list__item">
-                        <p class="requests-list__inscription" data-i18n="requests.list.item7">Вміння сказати «Ні»</p>
-                    </li>
-
-                    <li class="requests-list__item">
-                        <p class="requests-list__inscription" data-i18n="requests.list.item8">Формування особистих
-                            кордонів</p>
-                    </li>
-
-                    <li class="requests-list__item">
-                        <p class="requests-list__inscription" data-i18n="requests.list.item9">Конфлікти в парі /
-                            романтичні відносини</p>
-                    </li>
-
-                    <li class="requests-list__item">
-                        <p class="requests-list__inscription" data-i18n="requests.list.item10">Формування дорослості</p>
-                    </li>
-
-                    <li class="requests-list__item">
-                        <p class="requests-list__inscription" data-i18n="requests.list.item11">Відносини з грошима</p>
-                    </li>
-
-                    <li class="requests-list__item">
-                        <p class="requests-list__inscription" data-i18n="requests.list.item12">Зміцнення внутрішньої
-                            опори
-                        </p>
-                    </li>
-                </ul>
-            </div>
-        </section>
-
-        <section id="methods" class="section section-methods">
-            <div class="container">
-                <h2 class="section__title" data-i18n="methods.title">Методи, з якими я працюю:</h2>
-                <p class="section__subtitle" data-i18n="methods.subtitle">
-                    У роботі я використовую інтегративний підхід: поєдную різні методи, підбираючи їх під індивідуальний
-                    запит. Це допомагає знайти більш ефективний шлях саме для вас.
+          <div class="reviews-carousel" id="reviewsCarousel">
+            <div class="reviews-track">
+              <div class="review-card">
+                <p class="review-card__text" data-i18n="reviews.review1">
+                  Я вважаю що ви крутий психолог який дійсно лікує словом, маєте розуміння того як
+                  працює мозок, ви багато розкопали і допомогли дійсно не впасти в повну втому і не
+                  розуміння свого стану, як психолог ви хороша спеціалістка, надихаєте, намагаєтесь
+                  ніяк не зачепити чи стурбувати людину, залишити у стабільному стані, дуже мило що
+                  ви на зв'язку навіть в не робочі години бо часто для людей у важкі періоди це
+                  важливо як би ніяково це не було.
                 </p>
-                <ul class="methods-list">
-                    <li class="methods-list__item">
-                        <span data-i18n="methods.list.item1">Арт-терапія</span>
-                    </li>
-                    <li class="methods-list__item">
-                        <span data-i18n="methods.list.item2">Тілесно-орієнтована терапія</span>
-                    </li>
-                    <li class="methods-list__item">
-                        <span data-i18n="methods.list.item3">Гештальт терапія</span>
-                    </li>
-                    <li class="methods-list__item">
-                        <span data-i18n="methods.list.item4">Елементи символдрами</span>
-                    </li>
-                    <li class="methods-list__item">
-                        <span data-i18n="methods.list.item5">Емоційно-образна терапія</span>
-                    </li>
-                    <li class="methods-list__item">
-                        <span data-i18n="methods.list.item6">Позитивна психотерапія</span>
-                    </li>
-                </ul>
-            </div>
-        </section>
+              </div>
 
-        <section id="consultations" class="section section-video  section--background">
-            <div class="container">
-                <div class="youtube-facade" data-id="EHk3NvlF_7Q">
-                    <div class="youtube-wrapper">
-                        <img src="https://img.youtube.com/vi/EHk3NvlF_7Q/hqdefault.jpg" alt="YouTube video thumbnail"
-                            width="480" height="360" loading="lazy" />
-                        <button class="play-button" aria-label="Play video">▶</button>
-                    </div>
-                </div>
-
-                <div class="consultation-block">
-                    <h2 class="consultation-title section__title" data-i18n="consultations.title">Запрошую вас на
-                        консультацію</h2>
-                    <ul class="consultation-prices">
-                        <li class="consultation-prices__item">
-                            <span data-i18n="consultations.individual">Вартість індивідуальної консультації 55
-                                хв.</span>
-                            <strong data-i18n="consultations.individual-price">2000 грн</strong>
-                        </li>
-                        <li class="consultation-prices__item">
-                            <span data-i18n="consultations.couple">Вартість парної консультації 90 хв.</span>
-                            <strong data-i18n="consultations.couple-price">2800 грн</strong>
-                        </li>
-                        <li class="consultation-prices__item">
-                            <span data-i18n="consultations.free">Дружинам військовослужбовців ЗСУ перші
-                                консультації </span>
-                            <strong data-i18n="consultations.free-price">безкоштовно</strong>
-                        </li>
-                    </ul>
-                </div>
-
-                <div class="contact-box">
-                    <button type="button" class="contactBtn">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="1.4em" height="1.4em" viewBox="0 0 24 24"
-                            fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                            stroke-linejoin="round">
-                            <path d="M5 12h14M13 5l7 7-7 7" />
-                        </svg>
-                        <span data-i18n="consultations.book">
-                            Записатися на консультацію
-                        </span>
-                    </button>
-                    <div class="contact-links">
-                        <a href="https://wa.me/+393517565786" target="_blank" class="contact-link whatsapp">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="2em" height="2em" viewBox="0 0 1024 1024">
-                                <path fill="#fff"
-                                    d="M713.5 599.9c-10.9-5.6-65.2-32.2-75.3-35.8c-10.1-3.8-17.5-5.6-24.8 5.6c-7.4 11.1-28.4 35.8-35 43.3c-6.4 7.4-12.9 8.3-23.8 2.8c-64.8-32.4-107.3-57.8-150-131.1c-11.3-19.5 11.3-18.1 32.4-60.2c3.6-7.4 1.8-13.7-1-19.3s-24.8-59.8-34-81.9c-8.9-21.5-18.1-18.5-24.8-18.9c-6.4-.4-13.7-.4-21.1-.4s-19.3 2.8-29.4 13.7c-10.1 11.1-38.6 37.8-38.6 92s39.5 106.7 44.9 114.1c5.6 7.4 77.7 118.6 188.4 166.5c70 30.2 97.4 32.8 132.4 27.6c21.3-3.2 65.2-26.6 74.3-52.5c9.1-25.8 9.1-47.9 6.4-52.5c-2.7-4.9-10.1-7.7-21-13" />
-                                <path fill="#fff"
-                                    d="M925.2 338.4c-22.6-53.7-55-101.9-96.3-143.3c-41.3-41.3-89.5-73.8-143.3-96.3C630.6 75.7 572.2 64 512 64h-2c-60.6.3-119.3 12.3-174.5 35.9c-53.3 22.8-101.1 55.2-142 96.5s-73 89.3-95.2 142.8c-23 55.4-34.6 114.3-34.3 174.9c.3 69.4 16.9 138.3 48 199.9v152c0 25.4 20.6 46 46 46h152.1c61.6 31.1 130.5 47.7 199.9 48h2.1c59.9 0 118-11.6 172.7-34.3c53.5-22.3 101.6-54.3 142.8-95.2c41.3-40.9 73.8-88.7 96.5-142c23.6-55.2 35.6-113.9 35.9-174.5c.3-60.9-11.5-120-34.8-175.6m-151.1 438C704 845.8 611 884 512 884h-1.7c-60.3-.3-120.2-15.3-173.1-43.5l-8.4-4.5H188V695.2l-4.5-8.4C155.3 633.9 140.3 574 140 513.7c-.4-99.7 37.7-193.3 107.6-263.8c69.8-70.5 163.1-109.5 262.8-109.9h1.7c50 0 98.5 9.7 144.2 28.9c44.6 18.7 84.6 45.6 119 80c34.3 34.3 61.3 74.4 80 119c19.4 46.2 29.1 95.2 28.9 145.8c-.6 99.6-39.7 192.9-110.1 262.7" />
-                            </svg> WhatsApp
-                        </a>
-
-                        <a href="https://t.me/yuliiapikhotska" target="_blank" class="contact-link telegram">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="2em" height="2em" viewBox="0 0 24 24">
-                                <path fill="none" stroke="#fff" stroke-linecap="round" stroke-linejoin="round"
-                                    stroke-width="1.5"
-                                    d="M21 5L2 12.5l7 1M21 5l-2.5 15L9 13.5M21 5L9 13.5m0 0V19l3.249-3.277" />
-                            </svg>
-                            Telegram
-                        </a>
-
-                        <a href="tel:+380993679311" class="contact-link phone">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="2em" height="2em" viewBox="0 0 24 24">
-                                <path fill="none" stroke="#fff" stroke-dasharray="64" stroke-dashoffset="64"
-                                    stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                    d="M8 3c0.5 0 2.5 4.5 2.5 5c0 1 -1.5 2 -2 3c-0.5 1 0.5 2 1.5 3c0.39 0.39 2 2 3 1.5c1 -0.5 2 -2 3 -2c0.5 0 5 2 5 2.5c0 2 -1.5 3.5 -3 4c-1.5 0.5 -2.5 0.5 -4.5 0c-2 -0.5 -3.5 -1 -6 -3.5c-2.5 -2.5 -3 -4 -3.5 -6c-0.5 -2 -0.5 -3 0 -4.5c0.5 -1.5 2 -3 4 -3Z">
-                                    <animate fill="freeze" attributeName="stroke-dashoffset" dur="0.6s" values="64;0" />
-                                </path>
-                            </svg>
-                            +38 099 367 9311
-                        </a>
-
-
-                        <a href="https://www.instagram.com/psy.yuliia.pikhotska" target="_blank"
-                            class="contact-link instagram">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="2em" height="2em" viewBox="0 0 24 24">
-                                <path fill="#fff"
-                                    d="M7 2C4.243 2 2 4.243 2 7v10c0 2.757 2.243 5 5 5h10c2.757 0 5-2.243 5-5V7c0-2.757-2.243-5-5-5H7zm10 2a3 3 0 0 1 3 3v10a3 3 0 0 1-3 3H7a3 3 0 0 1-3-3V7a3 3 0 0 1 3-3h10zm-5 3a5 5 0 1 0 0 10a5 5 0 0 0 0-10zm0 2a3 3 0 1 1 0 6a3 3 0 0 1 0-6zm4.5-2.5a1 1 0 1 0 0 2a1 1 0 0 0 0-2z" />
-                            </svg>
-                            Instagram
-                        </a>
-                    </div>
-                </div>
-
-            </div>
-        </section>
-
-        <section id="reviews" class="section section-reviews">
-            <div class="container">
-                <h2 class="section__title" data-i18n="reviews.title">Відгуки про роботу зі мною</h2>
-
-                <div class="reviews-carousel" id="reviewsCarousel">
-                    <div class="reviews-track">
-                        <div class="review-card">
-                            <p class="review-card__text" data-i18n="reviews.review1">
-                                Я вважаю що ви крутий психолог який дійсно лікує словом, маєте
-                                розуміння того як працює мозок, ви багато розкопали і допомогли дійсно не впасти в повну
-                                втому і не розуміння свого стану, як психолог ви хороша спеціалістка, надихаєте,
-                                намагаєтесь ніяк не зачепити чи стурбувати людину, залишити у стабільному стані, дуже
-                                мило що ви на зв'язку навіть в не робочі години бо часто для людей у важкі періоди це
-                                важливо як би ніяково це не було.
-                            </p>
-                        </div>
-
-                        <div class="review-card">
-                            <p class="review-card__text" data-i18n="reviews.review2">
-                                Доброго дня. Я вибачаюсь, пані Юлія.
-                                Чат загубився серед робочих і я забув про те, що обіцяв дати відгук.
-                                Мені дуже сподобалась наша з вами робота. Я дуже вдячний за допомогу та поради які ви
-                                надавали. Найважливіше - це те, що я чув від вас не те, що хотів чути, а те, що мені
-                                потрібно було почути.
-                            </p>
-                        </div>
-
-                        <div class="review-card">
-                            <p class="review-card__text" data-i18n="reviews.review3">
-                                Я дуже задоволений робою з вами, Юлія. Мене довго мучили думки,
-                                які я завжди прокручував в голові.
-                                Але після роботи з вами я зміг нарешті все розкласти по полках і зрозуміти для себе
-                                багато речей.
-                            </p>
-                        </div>
-
-                        <div class="review-card">
-                            <p class="review-card__text" data-i18n="reviews.review4">
-                                Я довго відкладала зустріч з вами, бо думала що зможу сама, але вже після кількох
-                                зустрічей я зрозуміла як мені це було потрібно. Дякую вам, що відкрили очі на багато
-                                речей, що допомогли впоратися зі всім і дали мені зрозуміти чого я варта.
-                            </p>
-                        </div>
-
-                        <div class="review-card">
-                            <p class="review-card__text" data-i18n="reviews.review5">
-                                Тільки після наших зустрічей я зрозуміла що мене чують по
-                                справжньому. Спочатку було не легко, але кожна сесія відкривала мені щось нове про мене
-                                ж. Тепер я набагато спокійніша, і ви дали мені те, чого мені так не вистачало.
-                            </p>
-                        </div>
-                    </div>
-
-                    <button class="nav prev">&#10094;</button>
-                    <button class="nav next">&#10095;</button>
-
-                    <div class="pagination"></div>
-                </div>
-            </div>
-        </section>
-
-        <section id="faq" class="section section-faq  section--background">
-            <div class="container">
-                <h2 class="section__title" data-i18n="faq.title">Питання та відповіді</h2>
-
-                <div class="accordion">
-                    <div class="accordion-item">
-                        <button class="accordion-header">
-                            <span class="icon-plus">+</span>
-                            <span data-i18n="faq.q1">
-                                Чи можна звернутися, якщо я не маю чіткого запиту?
-                            </span>
-                        </button>
-                        <div class="accordion-content">
-                            <p data-i18n="faq.a1">
-                                Так. Часто люди звертаються просто з відчуттям що щось не так або коли
-                                хочеться зрозуміти себе краще. Це вже достатня причина для консультацій
-                            </p>
-                        </div>
-                    </div>
-
-                    <div class="accordion-item">
-                        <button class="accordion-header">
-                            <span class="icon-plus">+</span>
-                            <span data-i18n="faq.q2">
-                                Як проходить перша консультація?
-                            </span>
-                        </button>
-                        <div class="accordion-content">
-                            <p data-i18n="faq.a2">
-                                На першій консультації ми обговорюємо ваші потреби та очікування,
-                                узгоджуємо формат і
-                                домовляємося про подальшу роботу. Під час першої зустрічі ми також можемо одразу
-                                розпочати роботу над вашими запитами.
-                            </p>
-                        </div>
-                    </div>
-
-                    <div class="accordion-item">
-                        <button class="accordion-header">
-                            <span class="icon-plus">+</span>
-                            <span data-i18n="faq.q3">
-                                Як зрозуміти скільки консультацій мені потрібно?
-                            </span>
-                        </button>
-                        <div class="accordion-content">
-                            <p data-i18n="faq.a3">Кількість консультацій залежить від індивідуального запиту та цілей.
-                                Зазвичай перші
-                                консультації допомагають зрозуміти, скільки часу може знадобитися.</p>
-                        </div>
-                    </div>
-
-                    <div class="accordion-item">
-                        <button class="accordion-header">
-                            <span class="icon-plus">+</span>
-                            <span data-i18n="faq.q4">
-                                Чи потрібно готуватися до консультацій?
-                            </span>
-                        </button>
-                        <div class="accordion-content">
-                            <p data-i18n="faq.a4"> Спеціальної підготовки консультації не потребують. Важливо лише
-                                подбати про місце, де
-                                вас ніхто не відволікатиме. Водночас у процесі роботи інколи я можу задавати домашнє
-                                завдання, які допомагають закріпити результат.</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section class="section section-articles" id="articles">
-            <div class="container">
-                <h2 class="section__title">Корисні статті</h2>
-                <p class="section__subtitle">
-                    Прості пояснення складних психологічних процесів та практичні поради для відновлення внутрішнього ресурсу
+              <div class="review-card">
+                <p class="review-card__text" data-i18n="reviews.review2">
+                  Доброго дня. Я вибачаюсь, пані Юлія. Чат загубився серед робочих і я забув про те,
+                  що обіцяв дати відгук. Мені дуже сподобалась наша з вами робота. Я дуже вдячний за
+                  допомогу та поради які ви надавали. Найважливіше - це те, що я чув від вас не те,
+                  що хотів чути, а те, що мені потрібно було почути.
                 </p>
+              </div>
 
-                <div class="articles-grid" id="articlesGrid">
-                </div>
+              <div class="review-card">
+                <p class="review-card__text" data-i18n="reviews.review3">
+                  Я дуже задоволений робою з вами, Юлія. Мене довго мучили думки, які я завжди
+                  прокручував в голові. Але після роботи з вами я зміг нарешті все розкласти по
+                  полках і зрозуміти для себе багато речей.
+                </p>
+              </div>
 
-                <div class="articles-action">
-                    <a href="#articles" class="articles-all-btn">Читати всі статті</a>
-                </div>
+              <div class="review-card">
+                <p class="review-card__text" data-i18n="reviews.review4">
+                  Я довго відкладала зустріч з вами, бо думала що зможу сама, але вже після кількох
+                  зустрічей я зрозуміла як мені це було потрібно. Дякую вам, що відкрили очі на
+                  багато речей, що допомогли впоратися зі всім і дали мені зрозуміти чого я варта.
+                </p>
+              </div>
+
+              <div class="review-card">
+                <p class="review-card__text" data-i18n="reviews.review5">
+                  Тільки після наших зустрічей я зрозуміла що мене чують по справжньому. Спочатку
+                  було не легко, але кожна сесія відкривала мені щось нове про мене ж. Тепер я
+                  набагато спокійніша, і ви дали мені те, чого мені так не вистачало.
+                </p>
+              </div>
             </div>
-        </section>
 
+            <button class="nav prev">&#10094;</button>
+            <button class="nav next">&#10095;</button>
+
+            <div class="pagination"></div>
+          </div>
+        </div>
+      </section>
+
+      <section id="faq" class="section section-faq section--background">
+        <div class="container">
+          <h2 class="section__title" data-i18n="faq.title">Питання та відповіді</h2>
+
+          <div class="accordion">
+            <div class="accordion-item">
+              <button class="accordion-header">
+                <span class="icon-plus">+</span>
+                <span data-i18n="faq.q1"> Чи можна звернутися, якщо я не маю чіткого запиту? </span>
+              </button>
+              <div class="accordion-content">
+                <p data-i18n="faq.a1">
+                  Так. Часто люди звертаються просто з відчуттям що щось не так або коли хочеться
+                  зрозуміти себе краще. Це вже достатня причина для консультацій
+                </p>
+              </div>
+            </div>
+
+            <div class="accordion-item">
+              <button class="accordion-header">
+                <span class="icon-plus">+</span>
+                <span data-i18n="faq.q2"> Як проходить перша консультація? </span>
+              </button>
+              <div class="accordion-content">
+                <p data-i18n="faq.a2">
+                  На першій консультації ми обговорюємо ваші потреби та очікування, узгоджуємо
+                  формат і домовляємося про подальшу роботу. Під час першої зустрічі ми також можемо
+                  одразу розпочати роботу над вашими запитами.
+                </p>
+              </div>
+            </div>
+
+            <div class="accordion-item">
+              <button class="accordion-header">
+                <span class="icon-plus">+</span>
+                <span data-i18n="faq.q3"> Як зрозуміти скільки консультацій мені потрібно? </span>
+              </button>
+              <div class="accordion-content">
+                <p data-i18n="faq.a3">
+                  Кількість консультацій залежить від індивідуального запиту та цілей. Зазвичай
+                  перші консультації допомагають зрозуміти, скільки часу може знадобитися.
+                </p>
+              </div>
+            </div>
+
+            <div class="accordion-item">
+              <button class="accordion-header">
+                <span class="icon-plus">+</span>
+                <span data-i18n="faq.q4"> Чи потрібно готуватися до консультацій? </span>
+              </button>
+              <div class="accordion-content">
+                <p data-i18n="faq.a4">
+                  Спеціальної підготовки консультації не потребують. Важливо лише подбати про місце,
+                  де вас ніхто не відволікатиме. Водночас у процесі роботи інколи я можу задавати
+                  домашнє завдання, які допомагають закріпити результат.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section section-articles" id="articles">
+        <div class="container">
+          <h2 class="section__title">Корисні статті</h2>
+          <p class="section__subtitle">
+            Прості пояснення складних психологічних процесів та практичні поради для відновлення
+            внутрішнього ресурсу
+          </p>
+
+          <div class="articles-grid" id="articlesGrid"></div>
+
+          <div class="articles-action">
+            <a href="#articles" class="articles-all-btn">Читати всі статті</a>
+          </div>
+        </div>
+      </section>
     </main>
 
     <footer class="page-footer footer">
-        <div class="footer__content">
-            <div class="footer__info">
-                <h2 class="footer__title" data-i18n="footer.name">Юлія Піхоцька</h2>
-                <p data-i18n="footer.position">Практичний психолог</p>
-                <button type="button" class="contactBtn footer__btn" data-i18n="footer.button">Консультація</button>
-
-            </div>
-            <div class="footer-contacts">
-                <p><span data-i18n="footer.email">Email: </span>
-                    <a target="_blank" href="mailto:yuliiapikhotska@gmail.com">yuliiapikhotska@gmail.com</a>
-                </p>
-                <p>
-                    <span data-i18n="footer.phone">Телефон: </span>
-                    <a target="_blank" href="tel:+380993679311">+38 099 367 9311</a>
-                </p>
-            </div>
-
-            <nav class="footer__nav">
-                <ul>
-                    <li><a href="#about" data-i18n="footer.navitem1">Про мене</a></li>
-                    <li><a href="#consultations" data-i18n="footer.navitem2">Консультації</a></li>
-                    <li><a href="#reviews" data-i18n="footer.navitem3">Відгуки</a></li>
-                    <li><a href="#articles">Статті</a></li>
-                </ul>
-            </nav>
+      <div class="footer__content">
+        <div class="footer__info">
+          <h2 class="footer__title" data-i18n="footer.name">Юлія Піхоцька</h2>
+          <p data-i18n="footer.position">Практичний психолог</p>
+          <button type="button" class="contactBtn footer__btn" data-i18n="footer.button">
+            Консультація
+          </button>
+        </div>
+        <div class="footer-contacts">
+          <p>
+            <span data-i18n="footer.email">Email: </span>
+            <a target="_blank" href="mailto:yuliiapikhotska@gmail.com">yuliiapikhotska@gmail.com</a>
+          </p>
+          <p>
+            <span data-i18n="footer.phone">Телефон: </span>
+            <a target="_blank" href="tel:+380993679311">+38 099 367 9311</a>
+          </p>
         </div>
 
-        <div class="footer__bottom">
-            <p data-i18n="footer.copyright">© 2025–2026 Юлія Піхоцька</p>
-        </div>
+        <nav class="footer__nav">
+          <ul>
+            <li><a href="#about" data-i18n="footer.navitem1">Про мене</a></li>
+            <li><a href="#consultations" data-i18n="footer.navitem2">Консультації</a></li>
+            <li><a href="#reviews" data-i18n="footer.navitem3">Відгуки</a></li>
+            <li><a href="#articles">Статті</a></li>
+          </ul>
+        </nav>
+      </div>
+
+      <div class="footer__bottom">
+        <p data-i18n="footer.copyright">© 2025–2026 Юлія Піхоцька</p>
+      </div>
     </footer>
 
     <div class="modal is-hidden" id="contactModal">
-        <div class="modal__content-wrapper">
-            <span class="modal__close" id="contactClose">&times;</span>
-            <form id="contactForm" class="form" action="https://formsubmit.co/yuliiapikhotska@gmail.com" method="POST">
-                <h2 data-i18n="form.title">Залиште, будь ласка, ваші дані. Я зв'яжусь з Вами найближчим часом для
-                    узгодження нашої зустрічі.
-                </h2>
+      <div class="modal__content-wrapper">
+        <span class="modal__close" id="contactClose">&times;</span>
+        <form
+          id="contactForm"
+          class="form"
+          action="https://formsubmit.co/yuliiapikhotska@gmail.com"
+          method="POST"
+        >
+          <h2 data-i18n="form.title">
+            Залиште, будь ласка, ваші дані. Я зв'яжусь з Вами найближчим часом для узгодження нашої
+            зустрічі.
+          </h2>
 
-                <label for="name" data-i18n="form.name">Ім'я</label>
-                <input type="text" id="name" name="name" required autofocus minlength="2">
+          <label for="name" data-i18n="form.name">Ім'я</label>
+          <input type="text" id="name" name="name" required autofocus minlength="2" />
 
-                <label for="tel" data-i18n="form.phone">Телефон</label>
-                <input type="tel" id="tel" name="tel" required pattern="^\+?\d{7,15}$" placeholder="+380...">
+          <label for="tel" data-i18n="form.phone">Телефон</label>
+          <input
+            type="tel"
+            id="tel"
+            name="tel"
+            required
+            pattern="^\+?\d{7,15}$"
+            placeholder="+380..."
+          />
 
-                <label for="messenger" data-i18n="form.messenger">В якому месенджері вам зручно зв'язатися</label>
-                <input type="text" id="messenger" name="messenger">
+          <label for="messenger" data-i18n="form.messenger"
+            >В якому месенджері вам зручно зв'язатися</label
+          >
+          <input type="text" id="messenger" name="messenger" />
 
-                <label for="message" data-i18n="form.message">Повідомлення</label>
-                <textarea id="message" name="message"></textarea>
+          <label for="message" data-i18n="form.message">Повідомлення</label>
+          <textarea id="message" name="message"></textarea>
 
-                <input type="hidden" name="_subject" value="Нове повідомлення з сайту">
-                <input type="hidden" name="_captcha" value="false">
-                <input type="hidden" name="_template" value="table">
-                <input type="hidden" name="_next" value="https://yuliiapikhotska.com">
-                <input type="text" name="website" style="display:none">
-                <input type="hidden" id="ts" name="timestamp">
+          <input type="hidden" name="_subject" value="Нове повідомлення з сайту" />
+          <input type="hidden" name="_captcha" value="false" />
+          <input type="hidden" name="_template" value="table" />
+          <input type="hidden" name="_next" value="https://yuliiapikhotska.com" />
+          <input type="text" name="website" style="display: none" />
+          <input type="hidden" id="ts" name="timestamp" />
 
-                <button type="submit" id="contactSubmit" data-i18n="form.button">Відправити</button>
-                <div id="formMessage" style="margin-top:10px; color:green; display:none;">Форма відправлена!</div>
-
-            </form>
-        </div>
+          <button type="submit" id="contactSubmit" data-i18n="form.button">Відправити</button>
+          <div id="formMessage" style="margin-top: 10px; color: green; display: none">
+            Форма відправлена!
+          </div>
+        </form>
+      </div>
     </div>
 
     <div class="modal" id="imageModal">
-        <span class="modal__close">&times;</span>
-        <img class="modal__content" id="modalImg" src="data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs="
-            alt="">
+      <span class="modal__close">&times;</span>
+      <img
+        class="modal__content"
+        id="modalImg"
+        src="data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs="
+        alt=""
+      />
     </div>
 
-
-
     <script defer src="https://unpkg.com/i18next@23.10.0/dist/umd/i18next.min.js"></script>
-    <script defer src="https://unpkg.com/i18next-http-backend@2.3.1/i18nextHttpBackend.min.js"></script>
-    <script defer
-        src="https://unpkg.com/i18next-browser-languagedetector@7.1.0/i18nextBrowserLanguageDetector.min.js"></script>
+    <script
+      defer
+      src="https://unpkg.com/i18next-http-backend@2.3.1/i18nextHttpBackend.min.js"
+    ></script>
+    <script
+      defer
+      src="https://unpkg.com/i18next-browser-languagedetector@7.1.0/i18nextBrowserLanguageDetector.min.js"
+    ></script>
 
     <script type="module" src="./js/index.js"></script>
-
-</body>
-
+  </body>
 </html>
