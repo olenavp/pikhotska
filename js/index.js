@@ -8,7 +8,9 @@ import './i18next.js';
 import './contactModal.js';
 import './validation.js';
 import { initHomeArticles } from './articles.js';
+import { initScrollspy } from './scrollspy.js';
 
 document.addEventListener('DOMContentLoaded', () => {
   initHomeArticles();
+  initScrollspy();
 });

@@ -435,9 +435,9 @@ li {
   top: 0;
   left: 0;
   height: 60px;
-  background: #d3dee4;
-  border-bottom: 1px solid #d3dee4;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  background: #2B3147;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.15);
   z-index: 100;
   display: flex;
   align-items: center;
@@ -474,7 +474,8 @@ li {
   -o-object-fit: cover;
      object-fit: cover;
   display: block;
-  box-shadow: 0 2px 6px rgba(43, 49, 71, 0.15);
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+  border: 1px solid rgba(255, 255, 255, 0.15);
   flex-shrink: 0;
 }
 @media screen and (min-width: 1200px) {
@@ -494,7 +495,7 @@ li {
   font-size: 15px;
   font-weight: 600;
   letter-spacing: 0.12em;
-  color: #2B3147;
+  color: #ffffff;
 }
 @media screen and (min-width: 1200px) {
   .page-header__logo .logo__name {
@@ -506,7 +507,7 @@ li {
   font-size: 7.5px;
   font-weight: 600;
   letter-spacing: 0.32em;
-  color: #2B3147;
+  color: #ffffff;
   margin-top: 2px;
 }
 @media screen and (min-width: 1200px) {
@@ -523,20 +524,25 @@ li {
     background-color: transparent;
     z-index: 2;
     cursor: pointer;
+    color: #ffffff;
+    fill: #ffffff;
   }
   .menu-button.is-open {
     position: absolute;
     top: 10px;
     right: 15px;
+    color: #ffffff;
+    fill: #ffffff;
   }
   .menu-button__icon-cross {
     display: none;
+    fill: #ffffff;
   }
   .menu-button.is-open .menu-button__icon-cross {
     display: block;
   }
   .menu-button.is-open .menu-button__icon-cross:hover {
-    fill: #2B3147;
+    fill: #add8fb;
   }
   .menu-button.is-open .menu-button__icon-burger {
     display: none;
@@ -549,7 +555,8 @@ li {
     width: 100%;
     z-index: 1;
     padding: 48px 40px;
-    background-color: #ffffff;
+    background-color: #2B3147;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
     flex-direction: column;
     align-items: flex-start;
   }
@@ -598,12 +605,12 @@ li {
 }
 
 .main-nav__link {
-  color: #757575;
+  color: #ffffff;
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
   font-weight: 500;
   font-size: 20px;
   line-height: 1.17;
   letter-spacing: 0.02em;
-  color: #2B3147;
 }
 @media screen and (min-width: 768px) {
   .main-nav__link {
@@ -614,6 +621,7 @@ li {
     font-weight: 500;
     font-size: 14px;
     line-height: 1.14;
+    color: #ffffff;
   }
 }
 @media screen and (min-width: 1200px) {
@@ -627,7 +635,11 @@ li {
   }
 }
 .main-nav__link:hover, .main-nav__link:focus {
+  color: #add8fb;
   text-decoration: underline;
+}
+.main-nav__link--current {
+  color: #add8fb;
 }
 
 .lang-switch {
@@ -635,10 +647,10 @@ li {
   margin-left: 12px;
   border-radius: 12px;
   overflow: hidden;
-  border: 1px solid #ffffff;
+  border: 1px solid rgba(255, 255, 255, 0.2);
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1), 0 2px 4px rgba(0, 0, 0, 0.06);
   font-size: 0.8rem;
-  background-color: #d3dee4;
+  background-color: rgba(255, 255, 255, 0.08);
 }
 .lang-switch button {
   flex: 1;
@@ -647,15 +659,16 @@ li {
   border: none;
   cursor: pointer;
   transition: all 0.2s;
-  color: #757575;
+  color: rgba(255, 255, 255, 0.75);
 }
 .lang-switch button:hover, .lang-switch button:focus {
-  background-color: #d3dee4;
+  background-color: rgba(255, 255, 255, 0.15);
   color: #ffffff;
 }
 .lang-switch button.active {
   background-color: #ffffff;
-  color: #d3dee4;
+  color: #2B3147;
+  font-weight: 600;
   box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.2);
 }
 
@@ -676,9 +689,9 @@ li {
   width: 100%;
   padding: 12px 18px;
   margin-bottom: 20px;
-  background-color: #d3dee4;
+  background-color: #add8fb;
   color: #2B3147;
-  border: 1px solid #d3dee4;
+  border: 1px solid #add8fb;
   font-size: 18px;
   font-weight: 600;
   text-align: center;
@@ -688,7 +701,8 @@ li {
   transition: background-color 0.3s ease;
 }
 .header__contact-btn:hover, .header__contact-btn:focus {
-  outline: 1px solid #003a79;
+  background-color: #ffffff;
+  outline: 1px solid #ffffff;
 }
 .header__contact-btn:active {
   transform: translateY(0);
