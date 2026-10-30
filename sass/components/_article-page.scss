@@ -344,6 +344,25 @@
     display: block;
     box-shadow: 0 6px 18px rgba(43, 49, 71, 0.06);
   }
+
+  figure,
+  .article-content-figure {
+    margin: 32px 0;
+    padding: 0;
+    text-align: center;
+
+    img {
+      margin: 0 auto;
+    }
+
+    figcaption {
+      font-size: 13px;
+      color: #757575;
+      margin-top: 10px;
+      font-style: italic;
+      line-height: 1.4;
+    }
+  }
 }
 
 .article-sidebar {

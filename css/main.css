@@ -2378,6 +2378,24 @@ li {
   display: block;
   box-shadow: 0 6px 18px rgba(43, 49, 71, 0.06);
 }
+.article-content figure,
+.article-content .article-content-figure {
+  margin: 32px 0;
+  padding: 0;
+  text-align: center;
+}
+.article-content figure img,
+.article-content .article-content-figure img {
+  margin: 0 auto;
+}
+.article-content figure figcaption,
+.article-content .article-content-figure figcaption {
+  font-size: 13px;
+  color: #757575;
+  margin-top: 10px;
+  font-style: italic;
+  line-height: 1.4;
+}
 
 .article-sidebar {
   display: none;

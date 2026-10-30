@@ -53,6 +53,24 @@ export function formatContent(paragraphs) {
         return `<blockquote><p>${parseInline(trimmed.substring(2))}</p></blockquote>`;
       }
 
+      // Markdown image syntax: ![alt](url) or ![](url)
+      const mdImageMatch = trimmed.match(/^!\[(.*?)\]\s*\((.*?)\)$/);
+      if (mdImageMatch) {
+        const alt = mdImageMatch[1].trim();
+        const src = mdImageMatch[2].trim();
+        const captionHtml = alt ? `<figcaption>${parseInline(alt)}</figcaption>` : '';
+        return `<figure class="article-content-figure"><img src="${escapeHtml(src)}" alt="${escapeHtml(alt)}" loading="lazy">${captionHtml}</figure>`;
+      }
+
+      // Direct or parenthesized image path: (./images/...) or ./images/...
+      const parenMatch = trimmed.match(/^\((.+?)\)$/);
+      const directCandidate = (parenMatch ? parenMatch[1] : trimmed).trim();
+      const isImgExt = /\.(jpe?g|png|webp|svg|gif|avif)$/i.test(directCandidate.split('?')[0]);
+      const isImgPath = directCandidate.startsWith('./') || directCandidate.startsWith('../') || directCandidate.startsWith('/') || directCandidate.startsWith('images/') || /^https?:\/\//i.test(directCandidate);
+      if (isImgExt && isImgPath) {
+        return `<figure class="article-content-figure"><img src="${escapeHtml(directCandidate)}" alt="" loading="lazy"></figure>`;
+      }
+
       if (/^\d+\.\s/.test(trimmed)) {
         const lines = trimmed.split('\n');
         const items = lines
@@ -82,6 +100,7 @@ export function formatContent(paragraphs) {
 
 function parseInline(text) {
   return escapeHtml(text)
+    .replace(/!\[(.*?)\]\((.*?)\)/g, '<img src="$2" alt="$1" loading="lazy">')
     .replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>')
     .replace(/\*(.*?)\*/g, '<em>$1</em>');
 }
