@@ -36,6 +36,9 @@ export function formatContent(paragraphs) {
       let trimmed = p.trim();
       if (!trimmed) return '';
 
+      if (trimmed.startsWith('#### ')) {
+        return `<h4>${parseInline(trimmed.substring(5))}</h4>`;
+      }
       if (trimmed.startsWith('### ')) {
         return `<h3>${parseInline(trimmed.substring(4))}</h3>`;
       }

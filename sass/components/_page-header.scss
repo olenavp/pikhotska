@@ -40,11 +40,8 @@
   .logo__icon {
     height: 38px;
     width: 38px;
-    border-radius: 7px;
-    object-fit: cover;
+    object-fit: contain;
     display: block;
-    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
-    border: 1px solid rgba(255, 255, 255, 0.15);
     flex-shrink: 0;
 
     @media screen and (min-width: 1200px) {
@@ -236,7 +233,9 @@
   overflow: hidden;
   border: 1px solid rgba(255, 255, 255, 0.2);
 
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1), 0 2px 4px rgba(0, 0, 0, 0.06);
+  box-shadow:
+    0 4px 6px rgba(0, 0, 0, 0.1),
+    0 2px 4px rgba(0, 0, 0, 0.06);
   font-size: 0.8rem;
   background-color: rgba(255, 255, 255, 0.08);
 
