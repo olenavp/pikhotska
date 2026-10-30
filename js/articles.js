@@ -53,20 +53,23 @@ export function formatContent(paragraphs) {
         return `<blockquote><p>${parseInline(trimmed.substring(2))}</p></blockquote>`;
       }
 
-      // Markdown image syntax: ![alt](url) or ![](url)
       const mdImageMatch = trimmed.match(/^!\[(.*?)\]\s*\((.*?)\)$/);
       if (mdImageMatch) {
         const alt = mdImageMatch[1].trim();
-        const src = mdImageMatch[2].trim();
+        const src = mdImageMatch[2].trim().replace(/\\/g, '/');
         const captionHtml = alt ? `<figcaption>${parseInline(alt)}</figcaption>` : '';
         return `<figure class="article-content-figure"><img src="${escapeHtml(src)}" alt="${escapeHtml(alt)}" loading="lazy">${captionHtml}</figure>`;
       }
 
-      // Direct or parenthesized image path: (./images/...) or ./images/...
       const parenMatch = trimmed.match(/^\((.+?)\)$/);
-      const directCandidate = (parenMatch ? parenMatch[1] : trimmed).trim();
+      const directCandidate = (parenMatch ? parenMatch[1] : trimmed).trim().replace(/\\/g, '/');
       const isImgExt = /\.(jpe?g|png|webp|svg|gif|avif)$/i.test(directCandidate.split('?')[0]);
-      const isImgPath = directCandidate.startsWith('./') || directCandidate.startsWith('../') || directCandidate.startsWith('/') || directCandidate.startsWith('images/') || /^https?:\/\//i.test(directCandidate);
+      const isImgPath =
+        directCandidate.startsWith('./') ||
+        directCandidate.startsWith('../') ||
+        directCandidate.startsWith('/') ||
+        directCandidate.startsWith('images/') ||
+        /^https?:\/\//i.test(directCandidate);
       if (isImgExt && isImgPath) {
         return `<figure class="article-content-figure"><img src="${escapeHtml(directCandidate)}" alt="" loading="lazy"></figure>`;
       }
@@ -105,6 +108,15 @@ function parseInline(text) {
     .replace(/\*(.*?)\*/g, '<em>$1</em>');
 }
 
+function isImageInContent(imageSrc, content) {
+  if (!imageSrc || !content) return false;
+  const normalizedSrc = imageSrc.replace(/\\/g, '/');
+  const fileName = normalizedSrc.split('/').pop().split('?')[0].toLowerCase();
+  if (!fileName) return false;
+  const contentText = (Array.isArray(content) ? content.join(' ') : String(content)).replace(/\\/g, '/');
+  return contentText.toLowerCase().includes(fileName);
+}
+
 export function renderArticleCards(container, articles, options = {}) {
   if (!container) return;
 
@@ -135,9 +147,10 @@ export function renderArticleCards(container, articles, options = {}) {
 
   container.innerHTML = items
     .map(article => {
-      const hasImage = Boolean(article.image && article.image.trim());
+      const cardImg = (article.cardImage || article.image || '').trim().replace(/\\/g, '/');
+      const hasImage = Boolean(cardImg);
       const imageHtml = hasImage
-        ? `<img src="${article.image}" alt="${escapeHtml(article.title)}" loading="lazy">`
+        ? `<img src="${cardImg}" alt="${escapeHtml(article.title)}" loading="lazy">`
         : `<div class="article-card__placeholder" aria-hidden="true"></div>`;
 
       return `
@@ -220,10 +233,26 @@ export async function initSingleArticlePage() {
   }
 
   const heroImageContainer = document.getElementById('articleHeroMedia');
-  const hasImage = Boolean(article.image && article.image.trim());
   if (heroImageContainer) {
-    if (hasImage) {
-      heroImageContainer.innerHTML = `<img src="${article.image}" alt="${escapeHtml(article.title)}">`;
+    let heroSrc = null;
+
+    if (typeof article.heroImage === 'string' && article.heroImage.trim()) {
+      heroSrc = article.heroImage.trim().replace(/\\/g, '/');
+    } else if (
+      article.showHeroImage === false ||
+      article.heroImage === false ||
+      article.hideHeroImage === true
+    ) {
+      heroSrc = null;
+    } else if (article.image && article.image.trim()) {
+      const alreadyInContent = isImageInContent(article.image, article.content);
+      if (!alreadyInContent || article.showHeroImage === true) {
+        heroSrc = article.image.trim().replace(/\\/g, '/');
+      }
+    }
+
+    if (heroSrc) {
+      heroImageContainer.innerHTML = `<img src="${heroSrc}" alt="${escapeHtml(article.title)}">`;
       heroImageContainer.style.display = '';
     } else {
       heroImageContainer.innerHTML = '';
